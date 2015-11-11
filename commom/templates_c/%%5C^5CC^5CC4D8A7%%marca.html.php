@@ -1,0 +1,200 @@
+<?php /* Smarty version 2.6.12, created on 2015-11-10 16:28:28
+         compiled from marca.html */ ?>
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta name="description" content="" />
+	<link href="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon-tab.png" rel="icon">
+	<link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['URL']; ?>
+commom/css/estilo.css">
+	<title>Tink Roll</title>
+ 	<!-- Bootstrap -->
+    <link href="<?php echo $this->_tpl_vars['URL']; ?>
+commom/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container-fluid">
+        <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "../inc/header.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+        <div class="banner-interna hidden-xs">
+            <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/banner-institucional.jpg" alt="banner institucional" title="banner institucional">
+            <h2 class="titulo-banner-interna">marcas</h2>
+        </div>        
+        <section class="conteudo">
+            <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "../inc/breadcrumb.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+            <article class="bloco-conteudo">
+                <div class="col-xs-12 col-sm-3 col-md-3">
+                    <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "../inc/menu-lateral.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+                </div>
+                <div class="col-xs-12 col-sm-9 col-md-9">
+                    <h2 class="titulo-interna-destaque titulo-cor-cinza">&nbsp;&nbsp;Marcas</h2><br>
+
+                    <?php if ($this->_tpl_vars['urlMarca'] == 'bgl'): ?>
+
+                        <img class="img-marcas mg-top-none" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/bgl.jpg" alt="bgl" title="bgl">
+                        <h1 class="titulo-sobre mg-top-none">bgl</h1>
+                        <p class="txt-interna">O Grupo Schaeffler desenvolve e produz sob as marcas INA e FAG, mundialmente, rolamentos, mancais, guias lineares e componentes de motores para a ferramentaria, indústria automobilística e aeronáutica.</p>
+                        <p class="txt-interna"> <a href="<?php echo $this->_tpl_vars['URL']; ?>
+">Catalogo</a> </p>
+
+                    <?php elseif ($this->_tpl_vars['urlMarca'] == 'hiwin'): ?>
+                        <div class="row">
+                            <img class="img-marcas mg-top-none" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/hiwin.jpg" alt="hiwin" title="hiwin">
+                            <h1 class="titulo-sobre mg-top-none">hiwin</h1>
+                            <p class="txt-interna">O Grupo Schaeffler desenvolve e produz sob as marcas INA e FAG, mundialmente, rolamentos, mancais, guias lineares e componentes de motores para a ferramentaria, indústria automobilística e aeronáutica.</p>
+                            <!-- <p class="txt-interna">  </p> -->
+                        </div>
+                        <div class="row">
+                            <ul>
+                                <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ball Screws</li>
+                                <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Linear Guideways</li>
+                                <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Linear Motors</li>
+                                <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Linear Stages (KK Type)</li>
+                                <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Linear Stages (KS Type)</li>
+                                <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Linear Actuators</li>
+                                <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Linear Bearings</li>
+                                <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Linear Encoders-PMS</li>
+                            </ul>
+                        </div>
+
+                    <?php elseif ($this->_tpl_vars['urlMarca'] == "ina-flag"): ?>
+
+                        <img class="img-marcas mg-top-none" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/ina.jpg" alt="ina flag" title="ina flag">
+                        <h1 class="titulo-sobre mg-top-none">INA FAG</h1>
+                        <p class="txt-interna">O Grupo Schaeffler desenvolve e produz sob as marcas INA e FAG, mundialmente, rolamentos, mancais, guias lineares e componentes de motores para a ferramentaria, indústria automobilística e aeronáutica.</p>
+                        <p class="txt-interna"> <a target="_blank" href="http://medias.schaeffler.de/medias">Vide catálogos</a> </p>
+
+                    <?php elseif ($this->_tpl_vars['urlMarca'] == 'ktr'): ?>
+                        <div class="row">
+                            <img class="img-marcas mg-top-none" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/ktr.jpg" alt="ktr" title="ktr">
+                            <h1 class="titulo-sobre mg-top-none">ktr</h1>
+                            <p class="txt-interna">O Grupo Schaeffler desenvolve e produz sob as marcas INA e FAG, mundialmente, rolamentos, mancais, guias lineares e componentes de motores para a ferramentaria, indústria automobilística e aeronáutica.</p>
+                        </div>
+                        <div class="row">
+                            <ul>
+                                <li class="txt-interna"><a href="https://www.ktr.com/en/products/power-transmission-technology/couplings/flexible-jaw-and-pin-bush-couplings/rotex/rotex-standard/" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ROTEX</a></li>
+                                <li class="txt-interna"><a href="http://www.ktr.com/en/products/couplings/polynorm/950_ar.htm?frame=br" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POLY-NORM</a></li>
+                                <li class="txt-interna"><a href="http://www.ktr.com/en/products/couplings/951_polycoupling/pkz.htm?frame=br" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POLY COUPLING</a></li>
+                                <li class="txt-interna"><a href="http://www.ktr.com/en/products/couplings/revolexkx/960_kxd.htm?frame=br" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REVOLEX KX </a></li>
+                                <li class="txt-interna"><a href="http://www.ktr.com/en/products/couplings/bowex/910_junior.htm?frame=br" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BoWex</a></li>
+                                <li class="txt-interna"><a href="http://www.ktr.com/en/products/couplings/gearex/fa.htm?frame=br" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GEARex</a></li>
+                                <li class="txt-interna"><a href="http://www.ktr.com/en/products/couplings/bowexflepa/924_bowexflepa.htm?frame=br" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BoWex FLE-PA</a></li>
+                                <li class="txt-interna"><a href="http://www.ktr.com/en/products/couplings/bowexelastic/922_he1_he2.htm?frame=br" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BoWex-ELASTIC</a></li>
+                                <li class="txt-interna"><a href="http://www.ktr.com/en/products/couplings/925_monolastic/monolastic.htm?frame=br" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MONOLASTIC</a></li>
+                                <li class="txt-interna"><a href="http://www.ktr.com/en/products/couplings/radexn/931_nana1_nana2.htm?frame=br" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RADEX-N</a></li>
+                                <li class="txt-interna"><a href="http://www.ktr.com/en/products/couplings/rigiflex/rigiflex.htm?frame=br" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RIGIFLEX-N</a></li>
+                                <li class="txt-interna"><a href="http://www.ktr.com/en/products/couplings/rotexgs/backlashfree.htm?frame=br" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ROTEX GS</a></li>
+                                <li class="txt-interna"><a href="http://www.ktr.com/en/products/couplings/toolflex/943_typem.htm?frame=br" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOOLFLEX</a></li>
+                                <li class="txt-interna"><a href="http://www.ktr.com/en/products/couplings/radexnc/935_ek.htm?frame=br" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RADEX-NC</a></li>
+                                <li class="txt-interna"><a href="http://www.ktr.com/en/products/couplings/minex/957_s224.htm?frame=br" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MINEX-S</a></li>
+                                <li class="txt-interna"><a href="http://www.ktr.com/en/products/couplings/countex/countex1.htm?frame=br" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COUNTEX</a></li>
+                            </ul>
+                        </div>              
+                    <?php elseif ($this->_tpl_vars['urlMarca'] == 'nachi'): ?>
+
+                        <img class="img-marcas mg-top-none" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/nachi.jpg"  alt="nachi" title="nachi">
+                        <h1 class="titulo-sobre mg-top-none">nachi</h1>
+                        <p class="txt-interna">Rolamentos</p>
+                        <ul>
+                            <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rolamentos autocompensadores de rolos</li>
+                            <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rolamentos de precisão do Rolling</li>
+                            <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Suporte Rolamentos Screw</li>
+                            <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rolamentos de rolos cilíndricos</li>
+                            <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rolamentos Axiais</li>
+                            <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Radial Rolamentos</li>
+                        </ul>
+                        <p class="txt-interna"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://nachi-tool.jp/bearing/index.php" target="_blank">Catálogo Geral</a> </p>
+
+                    <?php elseif ($this->_tpl_vars['urlMarca'] == "metalflex-acoplamentos"): ?>
+
+                        <img class="img-marcas mg-top-none" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/metalflex.jpg" alt="metalflex" title="metalflex">
+                        <h1 class="titulo-sobre mg-top-none">metalflex</h1>
+                    <?php elseif ($this->_tpl_vars['urlMarca'] == 'rolmax'): ?>
+
+                        <img class="img-marcas mg-top-none" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/rolmax.jpg" alt="rolmax" title="rolmax">
+                        <h1 class="titulo-sobre mg-top-none">rolmax</h1>
+                        <p class="txt-interna">A ROLMAX fabrica a mais completa linha de unidades de rolamentos de esferas no país para eixos de 20mm a 100mm e ¾" a 4", totalmente blindados e relubrificáveis, mesmo quando montados com mancais de outros fabricantes, devido ao duplo sistema de relubrificação.</p>
+                    <?php elseif ($this->_tpl_vars['urlMarca'] == 'sabo'): ?>
+
+                        <img class="img-marcas mg-top-none" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/sabo.jpg" alt="sabo" title="sabo">
+                        <h1 class="titulo-sobre mg-top-none">sabo</h1>
+                        <p class="txt-interna">O grupo SABÓ, presente em 10 países, é um dos líderes mundiais no desenvolvimento de soluções em vedação para a indústria automobilística mundial.</p>
+                        <ul>
+                            <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.sabogroup.com.br/2010/produtos-retentores.php" target="_blank">Retentores</a></li>
+                            <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.sabogroup.com.br/2010/produtos-catalogos.php" target="_blank">Catálogo técnico</a></li>
+                            <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.sabogroup.com.br/2010/produtos-juntas.php" target="_blank">Juntas</a></li>
+                            <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.sabogroup.com.br/2010/produtos-total.php" target="_blank">Sabó total</a></li>
+                        </ul>
+
+                    <?php elseif ($this->_tpl_vars['urlMarca'] == 'sav'): ?>
+
+                        <img class="img-marcas mg-top-none" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/sav.jpg" alt="sav" title="sav">
+                        <h1 class="titulo-sobre mg-top-none">sav</h1>
+                        <p class="txt-interna"> <a href="http://www.retentoressav.com.br/" target="_blank">http://www.retentoressav.com.br/</a> </p>
+
+                    <?php elseif ($this->_tpl_vars['urlMarca'] == 'skf'): ?>
+
+                        <img class="img-marcas mg-top-none" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/skf.jpg" alt="skf" title="skf">
+                        <h1 class="titulo-sobre mg-top-none">skf</h1>
+                        <ul>
+                            <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rolamentos</li>
+                            <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rolamentos High-/super-precision</li>
+                            <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unidades de Rolamento</li>
+                            <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Caixas</li>
+                            <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dados gerais sobre rótulas e terminais de rótula</li>
+                            <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rolamentos deslizantes e buchas FW</li>
+                            <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vedantes</li>
+                            <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hydraulic seals</li>
+                            <li class="txt-interna">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coupling systems</li>
+                        </ul>
+
+                    <?php elseif ($this->_tpl_vars['urlMarca'] == 'timken'): ?>
+
+                        <img class="img-marcas mg-top-none" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/timken.jpg" alt="timken" title="timken">
+                        <h1 class="titulo-sobre mg-top-none">timken</h1>
+                    <?php endif; ?>
+                </div>
+            </article>    
+        </section>
+    </div>
+    <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "../inc/footer.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+</body>
+</html>

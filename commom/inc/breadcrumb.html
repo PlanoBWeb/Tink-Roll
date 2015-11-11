@@ -1,0 +1,22 @@
+<div class="bloco-breadcrumb">
+    <ul class="ul-breadcrumb">
+        <li class="linha-bread"><a class="link-bread" href="{$URL}">home</a> </li>
+        {if $url[2]}
+        	<li class="seta-bread"> >> </li>
+        	<li class="linha-bread"><a class="link-bread" href="{$URL}{if $url[0] == "noticia"}noticias{else}{$url[0]}{/if}">{if $url[0] == "noticia"} noticias {else} {$url[0]} {/if}</a></li>
+        	<li class="seta-bread"> >> </li>
+        	<!-- <li class="linha-bread"><a class="link-bread" href="{$URL}noticias/{$url[1]}">{$url[1]}</a></li> -->
+            <li class="linha-bread">{$url[1]}</li>
+        	<li class="seta-bread"> >> </li>
+        	<li class="linha-bread">{$url[2]}</li>
+        {elseif $url[1]}
+        	<li class="seta-bread"> >> </li>
+        	<li class="linha-bread"><a class="link-bread" href="{$URL}{if $url[0] == "noticia"}noticias{else}{$url[0]}{/if}">{if $url[0] == "noticia"} noticias {elseif $url[0] == "fale-conosco"} Fale Conosco {else} {$url[0]} {/if}</a></li>
+        	<li class="seta-bread"> >> </li>
+        	<li class="linha-bread">{$url[1]}</li>
+        {else}
+			<li class="seta-bread"> >> </li>
+        	<li class="linha-bread">{$pagina}</li>        
+        {/if}
+    </ul>
+</div>

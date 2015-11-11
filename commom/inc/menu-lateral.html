@@ -1,0 +1,68 @@
+<ul class="ul-menu-lateral hidden-xs">
+	{if $menuLateral == "marca"}
+	    <li class="linha-menu-lateral"><a class="link-menu-lateral {if $urlMarca == 'bgl'} link-menu-lateral-ativo {/if}" href="{$URL}marcas/bgl">BGL</a></li>
+	    <li class="linha-menu-lateral"><a class="link-menu-lateral {if $urlMarca == 'hiwin'} link-menu-lateral-ativo {/if}" href="{$URL}marcas/hiwin">HIWIN</a></li>
+	    <li class="linha-menu-lateral"><a class="link-menu-lateral {if $urlMarca == 'ina-flag'} link-menu-lateral-ativo {/if}" href="{$URL}marcas/ina-flag">INA FAG</a></li>
+	    <li class="linha-menu-lateral"><a class="link-menu-lateral {if $urlMarca == 'ktr'} link-menu-lateral-ativo {/if}" href="{$URL}marcas/ktr">KTR</a></li>
+	    <li class="linha-menu-lateral"><a class="link-menu-lateral {if $urlMarca == 'nachi'} link-menu-lateral-ativo {/if}" href="{$URL}marcas/nachi">NACHI</a></li>
+	    <li class="linha-menu-lateral"><a class="link-menu-lateral {if $urlMarca == 'metalflex-acoplamentos'} link-menu-lateral-ativo {/if}" href="{$URL}marcas/metalflex-acoplamentos">METALFLEX Acoplamentos</a></li>
+	    <li class="linha-menu-lateral"><a class="link-menu-lateral {if $urlMarca == 'rolmax'} link-menu-lateral-ativo {/if}" href="{$URL}marcas/rolmax">ROLMAX</a></li>
+	    <li class="linha-menu-lateral"><a class="link-menu-lateral {if $urlMarca == 'sabo'} link-menu-lateral-ativo {/if}" href="{$URL}marcas/sabo">SABÓ</a></li>
+	    <li class="linha-menu-lateral"><a class="link-menu-lateral {if $urlMarca == 'sav'} link-menu-lateral-ativo {/if}" href="{$URL}marcas/sav">SAV</a></li>
+	    <li class="linha-menu-lateral"><a class="link-menu-lateral {if $urlMarca == 'skf'} link-menu-lateral-ativo {/if}" href="{$URL}marcas/skf">SKF</a></li>
+	    <li class="linha-menu-lateral"><a class="link-menu-lateral {if $urlMarca == 'timken'} link-menu-lateral-ativo {/if}" href="{$URL}marcas/timken">TIMKEN</a></li>
+	{elseif $menuLateral == "produtos"}
+		<li class="linha-menu-lateral"><a class="link-menu-lateral link-menu-lateral-ativo link-menu-lateral-ativo-p" href="{$URL}">Produto 1</a></li>
+		<li class="linha-menu-lateral"><a class="link-menu-lateral" href="{$URL}">Produto 2</a></li>
+	{elseif $menuLateral == "noticias"}
+		{assign var="nmTipo" value=$nmTipo|default:""}
+		{section name=i loop=$dadosMenuLateral}   
+			{if $nmTipo <> $dadosMenuLateral[i].dataMes[0]}
+				<li class="linha-menu-lateral ano-menu-lateral">{$dadosMenuLateral[i].dataMes[0]}</li>     
+				<div class="encapsula-mes-ano">
+			{/if}
+			{assign var="nmTipo" value=$dadosMenuLateral[i].dataMes[0]}
+           	<li class="linha-menu-lateral"><a class="link-menu-lateral {if $url[2] == $dadosMenuLateral[i].Mes && $url[1] == $dadosMenuLateral[i].dataMes[0]}link-menu-lateral-ativo{/if}" href="{$URL}noticias/{$dadosMenuLateral[i].dataMes[0]}/{$dadosMenuLateral[i].Mes}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$dadosMenuLateral[i].Mes}</a></li>
+        	</div>   
+        {/section}  
+	{/if}
+</ul>
+
+<div class="bloco-menulat-mobile visible-xs-block">
+	{if $menuLateral == "marca"}
+		<select name="menuLateralMarca" class="form-control menuLateralMarca">
+			<option value="">Selecione uma marca</option>
+			<option value="{$URL}marcas/bgl">BGL</option>
+			<option value="{$URL}marcas/hiwin">HIWIN</option>
+			<option value="{$URL}marcas/ina-flag">INA FAG</option>
+			<option value="{$URL}marcas/ktr">KTR</option>
+			<option value="{$URL}marcas/nachi">NACHI</option>
+			<option value="{$URL}marcas/metalflex-acoplamentos">METALFLEX Acoplamentos</option>
+			<option value="{$URL}marcas/rolmax">ROLMAX</option>
+			<option value="{$URL}marcas/sabo">SABÓ</option>
+			<option value="{$URL}marcas/sav">SAV</option>
+			<option value="{$URL}marcas/skf">SKF</option>
+			<option value="{$URL}marcas/timken">TIMKEN</option>
+		</select>
+	{elseif $menuLateral == "produtos"}
+		<select name="menuLateralProdutos" class="form-control menuLatateralProd">
+			<option value="">Selecione um produto</option>
+			<option value="Produto1">Produto 1</option>
+			<option value="Produto2">Produto 2</option>
+		</select>
+	{elseif $menuLateral == "noticias"}
+		<select name="menuLateralNoticias" class="form-control menuLateralNot">
+			<option value="">Selecione uma noticia</option>
+			{assign var="nmTipo" value=$nmTipo|default:""}
+			{section name=i loop=$dadosMenuLateral}  
+				{if $nmTipo <> $dadosMenuLateral[i].dataMes[0]}
+					 <option value="" disabled="disabled">{$dadosMenuLateral[i].dataMes[0]}</option>   
+				{/if}
+				{assign var="nmTipo" value=$dadosMenuLateral[i].dataMes[0]}
+				<!-- <option value="{$URL}noticias/{$dadosMenuLateral[i].Mes}">{$dadosMenuLateral[i].Mes}</option> -->
+				<option value="{$URL}noticias/{$dadosMenuLateral[i].dataMes[0]}/{$dadosMenuLateral[i].Mes}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$dadosMenuLateral[i].Mes}</option>
+			{/section}  
+		</select>
+	{/if}
+</div>
+<br>

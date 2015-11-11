@@ -1,0 +1,32 @@
+{include file="admin/topo.html"}
+
+<!-- Conteúdo -->
+<form class="form-admin" name="frm_cadastro" method="POST" enctype="multipart/form-data" onSubmit="return checa()">
+        <p class="texto">VISUALIZAÇÃO DO PRODUTO</p>
+        
+        <label>*Titulo: <strong>{$dados[0].titulo}</strong></label>
+        
+        <label>*Categorias:</label>
+        {section name=i loop=$dadosCategoria}
+            <li>{$dadosCategoria[i].categoria}</li>
+        {/section}
+
+        <label>*Descrição:</label>
+        <label><strong>{$dados[0].descricao}</strong></label></br></br>
+            
+        {if $dados[0].caminhoImagem}
+            <img src="{$dados[0].caminhoImagem}" width="100" border="0"/>
+        {/if}
+
+        <br><br>
+
+        {if $dados[0].manual}
+            <img src="{$dados[0].manual}" width="100" border="0"/>
+        {/if}
+
+        </br></br>
+        <input name="voltar" type="button" class="botao" value="Editar esse Registro" onClick="location.href='adm_produto.php?acao=editar&id={$dados[0].id}';" />
+    </form>
+<!-- FIM Conteúdo -->
+
+{include file="admin/rodape.html"}

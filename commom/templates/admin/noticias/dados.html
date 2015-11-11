@@ -1,0 +1,73 @@
+﻿{include file="admin/topo.html"}
+
+{literal}
+<script>
+
+	function checa()
+	{
+		frm = document.frm_cadastro;
+		
+		if(trim(frm.titulo.value) == "")
+		{
+			alert("Preencha o campo Título!");
+			frm.titulo.focus();
+			return false;
+		}
+		
+		if(trim(frm.arquivo.value) == "" && trim(frm.caminhoImagem.value) == "")
+		{
+			alert("Selecione a imagem de destaque!");
+			return false;
+		}
+				
+		return true;
+	}
+</script>
+{/literal}
+
+<!-- Conteúdo -->
+    <form class="form-admin" name="frm_cadastro" method="POST" enctype="multipart/form-data" onSubmit="return checa()">
+        <input type="hidden" name="acao" value="gravar" />
+        <input type="hidden" name="id" value="{$dados[0].id}" />
+        <input type="hidden" name="caminhoImagem" value="{$dados[0].caminhoImagem}" />
+        <input type="hidden" name="manual" value="{$dados[0].manual}" />
+        <input type="hidden" name="extencoeValidas" value="jpg|jpeg|gif|png|pdf">
+
+        <p class="texto">CADASTRO DE PRODUTO</p>
+        
+        <label>*Nome:</label>
+        <input type="text" name="titulo" size="50" value="{$dados[0].titulo}" class="formu" />
+
+        <label style="float: left; margin-right: 50px;"> <input type="checkbox" name="especial" value="1" {if $dados[0].especial == 1}checked{/if} /> especial</label>
+        <label> <input type="checkbox" name="destaque" value="1" {if $dados[0].destaque == 1}checked{/if}/> destaque</label>
+        
+        
+        <label>*Categoria<b></b>:</label>
+        <select name="idCategoria[]" multiple style="height:150px">
+            {section name=i loop=$dadosCategoria}
+                <option value="{$dadosCategoria[i].id}" {if $dados[0].idCategoria == $dadosCategoria[i].id} selected="selected"{/if}>{$dadosCategoria[i].categoria}</option>
+            {/section}
+        </select>
+
+        <label>*Descrição:</label>
+        <textarea type="text" name="descricao" class="formu" />{$dados[0].descricao}</textarea>
+            
+        <label>*Imagem:</label>
+        <input type="file" name="arquivo" size="50"/>
+        {if $dados[0].caminhoImagem}
+            <img src="{$dados[0].caminhoImagem}" width="100" border="0"/>
+        {/if}
+
+        <label>*Manual:</label>
+        <input type="file" name="arquivo2" size="50"/>
+        {if $dados[0].manual}
+            <img src="{$dados[0].manual}" width="100" border="0"/>
+        {/if}
+
+        <input name="submit" type="submit" class="botao" value="{$botao}" />
+        <input name="voltar" type="button" class="botao" value="voltar" onClick="history.back();" />
+        <label class="no-top">* Campos obrigatórios.</label>
+    </form>
+<!-- FIM Conteúdo -->
+
+{include file="admin/rodape.html"}

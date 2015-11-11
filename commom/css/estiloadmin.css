@@ -1,0 +1,264 @@
+/*
+*   Menu drop
+*/
+
+.menu > ul > li:hover > ul {
+    opacity: 1 !important;
+    display: block !important;
+}
+
+
+.menu-drop-aparece{
+    display: none;
+    position: absolute;
+    height: auto;
+    padding-top: 21px;
+    margin-top: 15px;
+}
+
+.bloco-drop-down{
+    border: solid 1px #999;
+    border-top: transparent;
+    background: #fff;
+    z-index: 99999999999;
+    padding: 7px 5px 17px 0px;
+}
+
+.link-menu-drop{
+    color: #555;
+    font-family: 'Roboto-Regular';
+    font-size: 15px;
+    text-align: left;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.link-menu-drop:hover{
+    color: #f8981d;
+    font-weight: bold;
+}
+
+.linha-menu-topo{
+    float: left;
+    margin-right: 5px;
+}
+
+.link-menu-topo{
+    color: #000;
+}
+
+      
+.faixa-index{
+    width: 100%;
+    max-width: 100%;
+    height: 61px;
+    background: #fff;
+    position: absolute; 
+    z-index: 999;
+    -webkit-box-shadow: 0px 4px 29px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 4px 29px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 4px 29px 0px rgba(50, 50, 50, 0.75);
+}
+
+.topo{
+    width: 1240px !important;
+    margin: auto !important;
+    display: table;
+    position: relative;
+    z-index: 999;
+}
+
+.logo{
+    width: 209px;
+    height: 91px;
+    background-image: url('../../theme/images/logo.jpg');
+    z-index: 20;
+    background-size: cover;
+    float: left;
+}
+
+.menu-topo{
+    position: relative;
+    float: left;
+    margin-left: 13px; 
+    margin-top: 25px;
+    z-index: 10;
+    width: 1000px;
+    display: block;
+}
+
+.txt-menu-mobile{
+    display: none;
+}
+
+.link-menu-topo{
+    font-family: 'Luna Kronik Light';
+    font-size: 19px;
+    color: #231f20;
+    float: left;
+    padding: 0px 13px 0px 0px !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+
+/**
+*   Default formulário
+*/
+
+.form-admin{
+    width: 700px;
+    height: auto;
+    position: relative;
+    margin: auto;
+    display: table;
+}
+
+.form-admin label{
+    font-family: 'Luna Kronik Light';
+    font-size: 20px;
+    color: #231f20;
+    display: block;
+    margin-top: 15px;
+}
+
+.form-admin input[type="text"]{
+    width: 98%;
+    /*height: 20px;*/
+    padding: 10px 10px;
+    border: solid 1px #999;
+    color: #333;
+}
+
+
+.form-admin select{
+    width: 98%;
+    height: 35px;
+    padding: 0px 10px;
+    border: solid 1px #999;
+    color: #333;
+}
+
+.form-admin input[type="password"]{
+    width: 50%;
+    /*height: 20px;*/
+    padding: 10px 10px;
+    border: solid 1px #999;
+    color: #333;
+}
+
+
+.form-admin input[type="submit"]{
+    width: 20%;
+    height: 30px;
+    border: solid 1px #999;
+    color: #fff;
+    background: #999;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+}
+
+.form-admin input[type="file"]{
+    width: 100%;
+    height: 30px;
+    color: #000;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+}
+
+.form-admin textarea{
+    width: 98%;
+    padding: 10px 10px;
+    min-height: 100px;
+    color: #000;
+    display: block;
+    margin-top: 20px;
+    font-family: 'Luna Kronik Light';
+    font-size: 17px;
+    color: #000;
+}
+
+.form-admin img{
+    width: 100px;
+    max-height: 200px;
+    padding: 15px 10px;
+    border: solid 1px #999;
+    color: #333;
+    max-width: 100px;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.no-top{
+    margin-top: 0px;
+}
+
+.texto{
+    font-family: 'Luna Kronik Light';
+    font-size: 25px;
+    font-weight: bold;
+    color: #231f20;
+    display: block;
+    margin-top: 15px;
+}
+
+.ddd{
+    width: 15% !important;
+    margin-right: 3% !important;
+    float: left !important;
+}
+
+.telefone{
+    width: 80% !important;
+    float: left;
+}
+/**
+*   Default formulário
+*/
+
+/**
+*   Default tabela
+*/
+.tabela-mostra-dados{
+    width: 80%;
+    height: auto;
+    position: relative;
+    margin: auto;
+}
+
+.tabela-mostra-dados tr:nth-child(odd) {
+    background-color: #eee;
+}
+
+.tabela-mostra-dados tr:hover{
+    background: #ddd;
+}
+
+.texto-consulta{
+    font-family: 'Luna Kronik Light';
+    font-size: 20px;
+    font-weight: normal;
+    color: #231f20;
+    /*display: block;*/
+    margin-top: 15px;
+}
+
+.no-hover{
+    background: transparent !important;
+}
+
+.no-hover:hover{
+    background: transparent !important;
+}
+
+.no-hover p{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/**
+*   Default tabela
+*/
