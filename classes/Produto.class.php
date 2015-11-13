@@ -252,6 +252,73 @@ class Produto
 		return $retorno;
 	}
 	
+	// function Pesquisar($post, $totalPorPagina, $pagina)
+	// {
+	// 	$query = "";
+
+	// 	$sqlLimit = "";
+	// 	if ($totalPorPagina) {
+
+	// 		$numero = $pagina-1;
+	// 		$_limit = $numero*$totalPorPagina;
+
+	// 		$sqlLimit = "LIMIT ".$_limit.",".$totalPorPagina."";
+	// 	}
+
+	// 	if($post['categoria']){
+	// 		$joinCategoria = "
+	// 			INNER JOIN	
+	// 				produtocategoria
+	// 			ON 
+	// 				produto.id = produtocategoria.idProduto	
+	// 		";
+	// 	}
+		
+
+	// 	if($post['id'])
+	// 	{
+	// 		$query .= " AND produto.id = '".$post['id']."' ";
+	// 	}
+
+	// 	if($post['busca'])
+	// 	{
+	// 		$query .= " AND C.descricao LIKE '%".$post['busca']."%' ";
+	// 	}
+
+	// 	$retorno = array();
+	
+	// 	$sql = "SELECT
+	// 				*
+	// 			FROM  
+	// 				" . $this->entidade . 
+	// 				$joinCategoria.
+	// 				" 
+	// 			WHERE
+	// 				1 = 1 ".$query."
+	// 			ORDER BY
+	// 				id DESC
+	// 		".$sqlLimit." ";
+			
+	// 	$result = mysql_query($sql);
+	// 	if (!($result))
+	// 	{
+	// 		$retorno[0] = "1";
+	// 		$retorno[1] = "Erro ao executar a query. Classe = " . $this->entidade . " - Metodo = Pesquisar";
+	// 		return $retorno;
+	// 	}
+		
+	// 	$i = 0;
+	// 	while( $rows = mysql_fetch_array($result) )
+	// 	{
+	// 		$dados[$i] 					= $rows;
+	// 		$i++;
+	// 	}
+		
+	// 	$retorno[0] = 0;
+	// 	$retorno[1] = $dados;
+	// 	return $retorno;
+	// }
+
 	function Pesquisar($post, $totalPorPagina, $pagina)
 	{
 		$query = "";
@@ -265,19 +332,26 @@ class Produto
 			$sqlLimit = "LIMIT ".$_limit.",".$totalPorPagina."";
 		}
 
-		if($post['categoria']){
-			$joinCategoria = "
-				INNER JOIN	
-					produtocategoria
-				ON 
-					produto.id = produtocategoria.idProduto	
-			";
-		}
-		
-
 		if($post['id'])
 		{
 			$query .= " AND produto.id = '".$post['id']."' ";
+		}
+
+		if($post['produto'])
+		{
+			$query .= " AND P.pagina = '".$post['produto']."' ";
+		}
+
+		if($post['produtosCat'])
+		{
+			$joinCategoria = "
+				INNER JOIN	
+					categoria C
+				ON 
+					P.idCategoria = C.id
+			";
+
+			$query .= " AND C.urlAmigavel = '".$post['produtosCat']."' ";
 		}
 
 		if($post['busca'])
@@ -286,19 +360,20 @@ class Produto
 		}
 
 		$retorno = array();
-	
-		$sql = "SELECT
-					*
+		$sql = "SELECT 
+					P.titulo AS tituloProduto,
+					P.*,
+					C.*
 				FROM  
-					" . $this->entidade . 
+					" . $this->entidade . " P " .
 					$joinCategoria.
 					" 
 				WHERE
 					1 = 1 ".$query."
 				ORDER BY
-					id DESC
+					P.id DESC
 			".$sqlLimit." ";
-			
+
 		$result = mysql_query($sql);
 		if (!($result))
 		{
@@ -310,7 +385,8 @@ class Produto
 		$i = 0;
 		while( $rows = mysql_fetch_array($result) )
 		{
-			$dados[$i] 					= $rows;
+			$dados[$i] 						= $rows;
+			$dados[$i]['tituloProduto'] 	= utf8_encode($rows['tituloProduto']);
 			$i++;
 		}
 		

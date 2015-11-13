@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-10 16:14:50
+<?php /* Smarty version 2.6.12, created on 2015-11-11 17:48:57
          compiled from produto.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -41,8 +41,8 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "../inc/breadcrumb.htm
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-            <article class="bloco-conteudo">
-                <div class="col-xs-12 col-sm-3 col-md-3">
+            <article class="bloco-conteudo bloco-conteudo-pag">
+                <div class="col-xs-12 col-sm-3 col-md-3 encapsula-menu-lateral-pag">
                     <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "../inc/menu-lateral.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
@@ -51,30 +51,71 @@ unset($_smarty_tpl_vars);
                 </div>
                 <div class="col-xs-12 col-sm-9 col-md-9">
                     <div class="row">
-                        <h2 class="titulo-interna-destaque titulo-cor-cinza">&nbsp;&nbsp;Acoplamentos</h2><br>
-                        
-                        <div class="col-xs-12 col-sm-6 col-md-6 pd-none">
-                            <img class="img-produto pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/produto-detalhe.jpg" alt="produto" title="produto">
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6 pd-none">
-                            <h1 class="titulo-produto">Acoplamentos - Linha M</h1>
-                            <p class="txt-interna">Os acoplamentos de grades elásticas METALFLEX tipo M são torcionalmente flexíveis e estão disponíveis em 17 tamanhos, permitindo furações de até 235mm e transmitem torque de até 53.781 Nm. Esses acoplamentos podem ser utilizados tanto em posição vertical quanto horizontal, pois sua exclusiva vedação evita a entrada de impurezas e perda de lubrificante.</p>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-6 col-md-6 pd-none">
-                                    <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+                        <h1 class="titulo-produto">Acoplamentos - Linha M</h1>
+                        <h2 class="titulo-interna-destaque titulo-cor-cinza">Acoplamentos</h2>
+                        <div class="col-xs-12 col-sm-12 col-md-12 pd-none">
+
+
+                            <div class="col-xs-6 col-sm-3 col-md-3 pd-none">
+                                <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/categoria.png" title="categoria" alt="categoria">
-                                    <p class="titulo-interna-destaque titulo-cor-cinza mg-left-desc-prod">Categoria</p>
-                                    <p class="txt-interna mg-left-desc-prod">Acoplamentos</p>
-                                </div>   
-                                <div class="col-xs-12 col-sm-6 col-md-6 pd-none">
-                                    <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/manual.png" title="manual" alt="manual">
-                                    <p class="titulo-interna-destaque titulo-cor-cinza mg-left-desc-prod">Manual (pdf)</p>
-                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
+                                <p class="titulo-interna-destaque titulo-cor-cinza mg-left-desc-prod">Categoria</p>
+                                <p class="txt-interna mg-left-desc-prod">Acoplamentos</p>
+                            </div>   
+                            <div class="col-xs-6 col-sm-3 col-md-3 pd-none">
+                                <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon-dimensionamento.png" title="dimensionamento" alt="dimensionamento">
+                                <p class="titulo-interna-destaque titulo-cor-cinza mg-left-desc-prod">Dimensionamento</p>
+                                <a href="<?php echo $this->_tpl_vars['URL']; ?>
 " class="txt-interna mg-left-desc-prod">Acoplamentos</a>
-                                </div>        
-                            </div>
+                            </div> 
+                            <div class="col-xs-6 col-sm-3 col-md-3 pd-none">
+                                <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon-especificacao.png" title="especificação" alt="especificação">
+                                <p class="titulo-interna-destaque titulo-cor-cinza mg-left-desc-prod">Especificações Técnicas</p>
+                                <a href="<?php echo $this->_tpl_vars['URL']; ?>
+" class="txt-interna mg-left-desc-prod">Acoplamentos</a>
+                            </div> 
+                            <div class="col-xs-6 col-sm-3 col-md-3 pd-none encapsula-pdf-pag" >
+                                <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/manual.png" title="manual" alt="manual">
+                                <p class="titulo-interna-destaque titulo-cor-cinza mg-left-desc-prod">Manual (pdf)</p>
+                                <a href="<?php echo $this->_tpl_vars['URL']; ?>
+" class="txt-interna mg-left-desc-prod">Acoplamentos</a>
+                                <a href="<?php echo $this->_tpl_vars['URL']; ?>
+" class="txt-interna mg-left-desc-prod">Acoplamentos</a>
+                                <a href="<?php echo $this->_tpl_vars['URL']; ?>
+" class="txt-interna mg-left-desc-prod">Acoplamentos</a>
+                                <a href="<?php echo $this->_tpl_vars['URL']; ?>
+" class="txt-interna mg-left-desc-prod">Acoplamentos</a>
+                                <a href="<?php echo $this->_tpl_vars['URL']; ?>
+" class="txt-interna mg-left-desc-prod">Acoplamentos</a>
+                                <a href="<?php echo $this->_tpl_vars['URL']; ?>
+" class="txt-interna mg-left-desc-prod">Acoplamentos</a>
+                            </div> 
+
+
+                        </div>
+                        <div class="encapsula-conteudo-produto-pag">
+
+                            <?php if ($this->_tpl_vars['dados'][0]['filePagina']): ?>
+                                <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "../templates/".($this->_tpl_vars['pagInclude']), 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>                                
+                            <?php else: ?>
+                                <div class="col-xs-12 col-sm-6 col-md-6 pd-none">
+                                    <img class="img-produto pull-left" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][0]['caminhoImagem']; ?>
+" alt="<?php echo $this->_tpl_vars['dados'][0]['titulo']; ?>
+" title="<?php echo $this->_tpl_vars['dados'][0]['titulo']; ?>
+">
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6 pd-none encapsula-txt-prod-pag">
+                                    <p class="txt-interna"><?php echo $this->_tpl_vars['dados'][0]['descricao']; ?>
+</p>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
 

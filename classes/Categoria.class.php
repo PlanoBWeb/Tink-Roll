@@ -77,7 +77,7 @@ class Categoria
 				WHERE
 					1 = 1 ".$query."
 				ORDER BY
-					id DESC
+					titulo ASC
 		";
 		$result = mysql_query($sql);
 		if (!($result))
@@ -92,6 +92,7 @@ class Categoria
 		{
 			$dados[$i] 					= $rows;
 			$dados[$i]['categoria'] 		= utf8_encode($rows['categoria']);
+			$dados[$i]['titulo'] 			= utf8_encode($rows['titulo']);
 
 			$i++;
 		}

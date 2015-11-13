@@ -18,7 +18,7 @@
 		if (in_array($url[0], $permissao)) {
 			include $url[0].".php";
 		}else{
-			echo "Pagina nao encontrada!";
+			include "erro.php";
 		}
 	}
 ?>

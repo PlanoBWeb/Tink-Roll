@@ -12,8 +12,10 @@
 	    <li class="linha-menu-lateral"><a class="link-menu-lateral {if $urlMarca == 'skf'} link-menu-lateral-ativo {/if}" href="{$URL}marcas/skf">SKF</a></li>
 	    <li class="linha-menu-lateral"><a class="link-menu-lateral {if $urlMarca == 'timken'} link-menu-lateral-ativo {/if}" href="{$URL}marcas/timken">TIMKEN</a></li>
 	{elseif $menuLateral == "produtos"}
-		<li class="linha-menu-lateral"><a class="link-menu-lateral link-menu-lateral-ativo link-menu-lateral-ativo-p" href="{$URL}">Produto 1</a></li>
-		<li class="linha-menu-lateral"><a class="link-menu-lateral" href="{$URL}">Produto 2</a></li>
+		{section name=i loop=$dadosCategoria}   
+			<!-- <li class="linha-menu-lateral"><a class="link-menu-lateral link-menu-lateral-ativo-p" href="{$URL}"></a></li> -->
+			<li class="linha-menu-lateral"><a class="link-menu-lateral {if $url[1] == $dadosCategoria[i].urlAmigavel} link-menu-lateral-ativo {/if}" href="{$URL}produtos/{$dadosCategoria[i].urlAmigavel}">{$dadosCategoria[i].titulo}</a></li>
+		{/section} 
 	{elseif $menuLateral == "noticias"}
 		{assign var="nmTipo" value=$nmTipo|default:""}
 		{section name=i loop=$dadosMenuLateral}   

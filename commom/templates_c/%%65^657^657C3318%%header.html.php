@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-10 18:20:01
+<?php /* Smarty version 2.6.12, created on 2015-11-11 14:10:44
          compiled from ../inc/header.html */ ?>
 <header>
     <div class="encapsula-topo">

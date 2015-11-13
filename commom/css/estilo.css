@@ -651,6 +651,17 @@ footer
     list-style: none;
 }
 
+.txt-interna-lista
+{
+    font-size: 1em;
+    font-family: 'DIN Light';
+    color: #424242;
+    text-decoration: none;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    list-style: inherit;
+}
+
 .txt-interna a
 {
     color: #424242;
@@ -929,6 +940,48 @@ footer
     margin: 10px 10px 10px 0px;
 }
 
+.encapsula-conteudo-produto-pag
+{
+    max-width: 74%;
+    margin-top: 5%;
+    float: left;
+}
+
+.encapsula-txt-prod-pag
+{
+    padding-right: 30px !important; 
+    padding-left: 13px !important;
+}
+
+.encapsula-pdf-pag
+{
+    position: absolute !important; 
+    right: 0px;
+}
+
+.encapsula-menu-lateral-pag
+{
+    max-width: 25%;
+}
+
+.bloco-conteudo-pag
+{
+    max-width: 1300px;
+}
+
+/*Paginas produtos*/
+.prodQuadro2
+{
+    padding: 6px;
+    background-color: #ffffff;
+    width: 100%;
+    border: 1px solid #999999;
+    margin-top: 10px;
+    margin-right: 14px;
+    float: left;
+    margin-bottom: 10px;
+    margin-left: 14px;
+}
 
 
 
@@ -939,32 +992,7 @@ footer
 
 
 
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*Mobile*/
 @media all and (min-width: 1027px){
     .vitrine-slides{
         width: 500px !important;
@@ -1161,7 +1189,11 @@ footer
     {
         padding-left: 15px !important;
     }
-
+    
+    .encapsula-pdf-pag
+    {
+        position: relative !important;
+    }
 }
 
 
@@ -1189,6 +1221,11 @@ footer
     .mg-bottom-none
     {
         margin-bottom: 0px;
+    }
+
+    .bloco-form-produto
+    {
+        max-width: 85%;
     }
 }
 
