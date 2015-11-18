@@ -230,5 +230,40 @@
         }
     });
 
+    // Ajax Busca Desktop
+    $(document).ready(function(){
+        $("#buscaValor").keyup(function(){
+            var valorBusca = $('#buscaValor').val();
+            var min_length = 0;
+            var contaValor = $('#buscaValor').val().length;
+
+            if (contaValor != min_length) {
+
+                $.ajax({
+                type: "POST",
+                url: "produtos",
+                // data:'busca='+$(this).val(),
+                data: {search: valorBusca, buscaAjax: "buscaAjax"},
+          
+                    success: function(data){
+                        $("#carrega-busca").show();
+                        $("#carrega-busca").html(data);
+                        $("#buscaValor").css("background","#FFF");
+                    }
+                });
+            }else{
+                  $('#carrega-busca').hide();
+            }
+        });
+    });
+
+    $('#carrega-busca').on('click','.selectProduto', function(){
+        var valorTxtBusca = $(this).text();
+
+        $("#buscaValor").val(valorTxtBusca);
+        $("#carrega-busca").hide();
+        
+    });
+
     </script>
 {/literal}

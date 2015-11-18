@@ -36,10 +36,12 @@
                     {section name=i loop=$dados}   
                         <div class="col-xs-12 col-sm-4 col-md-4 pd-produto">
                             <div class="encapsula-produto">
-                                <div class="produto-especial"></div>
-                                <img src="{$URL}{$dados[i].caminhoThumb}" alt="produto" title="produto">
+                                {if $dados[i].hiwin}
+                                    <div class="produto-especial"></div>
+                                {/if}
+                                <img src="{$URL}{$dados[i].caminhoThumb}" alt="{$dados[i].titulo}" title="{$dados[i].titulo}">
                                 <h2 class="titulo-produtos"><a href="{$URL}produto">{$dados[i].titulo}</a></h2>
-                                <a class="saiba-mais" href="{$URL}produto/{$dados[i].urlAmigavel}/{$dados[i].pagina}" title="saiba mais sobre esse produto">Saiba mais</a>
+                                <a class="saiba-mais" href="{$URL}produto/{$dados[i].urlAmigavel}/" title="saiba mais sobre esse produto">Saiba mais</a>
                             </div>
                         </div>
                     {/section} 

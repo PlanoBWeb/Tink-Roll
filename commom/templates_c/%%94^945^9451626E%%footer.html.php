@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-10 18:17:52
+<?php /* Smarty version 2.6.12, created on 2015-11-18 17:47:56
          compiled from ../inc/footer.html */ ?>
 <footer>
     <article class="bloco-footer">
@@ -251,6 +251,41 @@ commom/js/vitrine/owl.carousel.js"></script>
         }else{
             $(menu).toggle();       
         }
+    });
+
+    // Ajax Busca Desktop
+    $(document).ready(function(){
+        $("#buscaValor").keyup(function(){
+            var valorBusca = $(\'#buscaValor\').val();
+            var min_length = 0;
+            var contaValor = $(\'#buscaValor\').val().length;
+
+            if (contaValor != min_length) {
+
+                $.ajax({
+                type: "POST",
+                url: "produtos",
+                // data:\'busca=\'+$(this).val(),
+                data: {search: valorBusca, buscaAjax: "buscaAjax"},
+          
+                    success: function(data){
+                        $("#carrega-busca").show();
+                        $("#carrega-busca").html(data);
+                        $("#buscaValor").css("background","#FFF");
+                    }
+                });
+            }else{
+                  $(\'#carrega-busca\').hide();
+            }
+        });
+    });
+
+    $(\'#carrega-busca\').on(\'click\',\'.selectProduto\', function(){
+        var valorTxtBusca = $(this).text();
+
+        $("#buscaValor").val(valorTxtBusca);
+        $("#carrega-busca").hide();
+        
     });
 
     </script>

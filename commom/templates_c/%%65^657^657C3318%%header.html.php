@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-11 14:10:44
+<?php /* Smarty version 2.6.12, created on 2015-11-18 17:55:09
          compiled from ../inc/header.html */ ?>
 <header>
     <div class="encapsula-topo">
@@ -63,12 +63,14 @@ localizacao">Localização </a>   </li>
                     <li class="linha-menu-topo"><a class="link-menu-topo" href="<?php echo $this->_tpl_vars['URL']; ?>
 fale-conosco">Contato </a>   </li>                    
                 </ul>
-                <form class="navbar-form navbar-left hidden-xs" role="search">
+                <form class="navbar-form navbar-left hidden-xs" action="<?php echo $this->_tpl_vars['URL']; ?>
+produtos" role="search" method="post">
                     <div class="form-group">
-                      <input type="text" class="form-control busca-topo" placeholder="Busca">
+                      <input type="text" class="form-control busca-topo" name="search" id="buscaValor" autocomplete="off" placeholder="Busca">
                     </div>
                     <button type="submit" class="buscar-topo"><img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/lupa.png" alt="buscar"></button>
+                    <div  id="carrega-busca" class="carrega-busca"></div>
                 </form>
             </div>
         </div>

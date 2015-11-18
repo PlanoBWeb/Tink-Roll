@@ -4,7 +4,7 @@
 	$url = str_replace("clientes/TinkRoll/Web/", "", $url);
 	$url = explode('/', $url);
 	
-	$permissao  = array('home', 'index', 'institucional', 'localizacao','produtos', 'marcas', 'fale-conosco', 'envia', 'obrigado-contato', 'produtos','produto', 'noticias', 'noticia');
+	$permissao  = array('home', 'index', 'institucional', 'localizacao','produtos', 'marcas', 'fale-conosco', 'envia', 'obrigado-contato','produto', 'noticias', 'noticia');
 	$marcas 	= array("bgl", "hiwin", "ina-flag", "ktr", "nachi", "metalflex-acoplamentos", "rolmax", "sabo", "sav", "skf", "timken");
 
 	if ($url[0] == "" || $url[0] == "index") {

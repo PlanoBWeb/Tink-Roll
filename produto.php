@@ -15,8 +15,10 @@
 		exit();
 	}
 
-	$parametro['produtosCat'] 	= $url[1];
-	$parametro['produto'] 		= $url[2];
+	// $parametro['produtosCat'] 	= $url[1];
+	// $parametro['produto'] 		= $url[2];
+	$parametro['produto'] 		= $url[1];
+	// $parametro['produtosCat'] 	= $_POST['search'];
 	$retorno 					= $class->Pesquisar($parametro, null, null);
 	if( $retorno[0] )
 	{
@@ -26,10 +28,6 @@
 		exit();
 	}
 
-// echo "<pre>";
-// print_r($retorno);
-// die();
-
 	$smarty->assign("pagInclude", $retorno[1][0]['filePagina']);
 	$smarty->assign("dadosCategoria", $retornoCategoria[1]);
 	$smarty->assign("dados", $retorno[1]);
@@ -37,5 +35,8 @@
 	$smarty->assign("pagina", $pagina);	
 	$smarty->assign("URL", URL);
 	$smarty->assign("menuLateral", "produtos");
+	$smarty->assign("menuLateral", "produtos");
 	$smarty->display("produto.html");
+	exit;
+?>
 ?>

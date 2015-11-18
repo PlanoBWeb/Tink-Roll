@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-11 16:43:25
+<?php /* Smarty version 2.6.12, created on 2015-11-18 17:45:59
          compiled from produtos.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -77,16 +77,19 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
 ?>   
                         <div class="col-xs-12 col-sm-4 col-md-4 pd-produto">
                             <div class="encapsula-produto">
-                                <div class="produto-especial"></div>
+                                <?php if ($this->_tpl_vars['dados'][$this->_sections['i']['index']]['hiwin']): ?>
+                                    <div class="produto-especial"></div>
+                                <?php endif; ?>
                                 <img src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoThumb']; ?>
-" alt="produto" title="produto">
+" alt="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
+" title="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
+">
                                 <h2 class="titulo-produtos"><a href="<?php echo $this->_tpl_vars['URL']; ?>
 produto"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
 </a></h2>
                                 <a class="saiba-mais" href="<?php echo $this->_tpl_vars['URL']; ?>
 produto/<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['urlAmigavel']; ?>
-/<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['pagina']; ?>
-" title="saiba mais sobre esse produto">Saiba mais</a>
+/" title="saiba mais sobre esse produto">Saiba mais</a>
                             </div>
                         </div>
                     <?php endfor; endif; ?> 

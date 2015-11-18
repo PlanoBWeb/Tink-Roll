@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-11 18:00:01
+<?php /* Smarty version 2.6.12, created on 2015-11-18 15:22:45
          compiled from ../templates/grades_elasticas.html */ ?>
 <div class="col-xs-12 col-sm-12 col-md-12 pd-none encapsula-txt-prod-pag">
 	<img class="img-produto pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
@@ -62,12 +62,4 @@ upload/produto/acopla_sobrecarga.jpg" alt="Sobrecarga" title="Sobrecarga" width=
 	        </div>
 		</div>
 	</div>
-
-
-
-
-
-
-
-
 </div>

@@ -321,6 +321,7 @@ class Produto
 
 	function Pesquisar($post, $totalPorPagina, $pagina)
 	{
+
 		$query = "";
 
 		$sqlLimit = "";
@@ -337,37 +338,54 @@ class Produto
 			$query .= " AND produto.id = '".$post['id']."' ";
 		}
 
+		// if($post['produto'])
+		// {
+		// 	$query .= " AND P.pagina = '".$post['produto']."' ";
+		// }
+
 		if($post['produto'])
 		{
-			$query .= " AND P.pagina = '".$post['produto']."' ";
+			$query .= " AND P.urlAmigavel = '".$post['produto']."' ";
 		}
 
-		if($post['produtosCat'])
-		{
-			$joinCategoria = "
-				INNER JOIN	
-					categoria C
-				ON 
-					P.idCategoria = C.id
-			";
 
-			$query .= " AND C.urlAmigavel = '".$post['produtosCat']."' ";
-		}
+		// if($post['produtosCat'])
+		// {
+		// 	$joinCategoria = "
+		// 		INNER JOIN	
+		// 			categoria C
+		// 		ON 
+		// 			P.idCategoria = C.id
+		// 	";
+
+		// 	$query .= " AND C.urlAmigavel = '".$post['produtosCat']."' ";
+		// }
+
+		// Nao uso pra nada
+		// if($post['busca'])
+		// {
+		// 	$query .= " AND C.descricao LIKE '%".$post['busca']."%' ";
+		// }
 
 		if($post['busca'])
 		{
-			$query .= " AND C.descricao LIKE '%".$post['busca']."%' ";
+			$query .= " AND P.titulo LIKE '%".$post['busca']."%' ";
 		}
 
 		$retorno = array();
 		$sql = "SELECT 
 					P.titulo AS tituloProduto,
 					P.*,
-					C.*
+					C.id AS idCat,
+					C.titulo AS tituloCat
 				FROM  
 					" . $this->entidade . " P " .
-					$joinCategoria.
+				
 					" 
+				INNER JOIN	
+					categoria C
+				ON 
+					P.idCategoria = C.id
 				WHERE
 					1 = 1 ".$query."
 				ORDER BY
@@ -387,6 +405,7 @@ class Produto
 		{
 			$dados[$i] 						= $rows;
 			$dados[$i]['tituloProduto'] 	= utf8_encode($rows['tituloProduto']);
+			$dados[$i]['titulo']		 	= utf8_encode($rows['titulo']);
 			$i++;
 		}
 		
