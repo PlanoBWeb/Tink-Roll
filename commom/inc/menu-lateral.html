@@ -49,8 +49,11 @@
 	{elseif $menuLateral == "produtos"}
 		<select name="menuLateralProdutos" class="form-control menuLatateralProd">
 			<option value="">Selecione um produto</option>
-			<option value="Produto1">Produto 1</option>
-			<option value="Produto2">Produto 2</option>
+			<!-- <option value="Produto1">Produto 1</option>
+			<option value="Produto2">Produto 2</option> -->
+			{section name=i loop=$dadosCategoria}  
+				<option value="{$URL}produtos/{$dadosCategoria[i].urlAmigavel}">{$dadosCategoria[i].titulo}</option> 
+			{/section} 
 		</select>
 	{elseif $menuLateral == "noticias"}
 		<select name="menuLateralNoticias" class="form-control menuLateralNot">

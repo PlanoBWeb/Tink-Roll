@@ -33,18 +33,22 @@
                 </div>
                 <div class="col-xs-12 col-sm-9 col-md-9">
                     <h2 class="titulo-interna-destaque titulo-cor-cinza">&nbsp;&nbsp;Produtos</h2><br>
-                    {section name=i loop=$dados}   
-                        <div class="col-xs-12 col-sm-4 col-md-4 pd-produto">
-                            <div class="encapsula-produto">
-                                {if $dados[i].hiwin}
-                                    <div class="produto-especial"></div>
-                                {/if}
-                                <img src="{$URL}{$dados[i].caminhoThumb}" alt="{$dados[i].titulo}" title="{$dados[i].titulo}">
-                                <h2 class="titulo-produtos"><a href="{$URL}produto">{$dados[i].titulo}</a></h2>
-                                <a class="saiba-mais" href="{$URL}produto/{$dados[i].urlAmigavel}/" title="saiba mais sobre esse produto">Saiba mais</a>
+                    {if $dados < 1}
+                        <center><p class="titulo-produto">Nenhum resultado encontrado</p> </center>
+                    {else}
+                        {section name=i loop=$dados}   
+                            <div class="col-xs-12 col-sm-4 col-md-4 pd-produto">
+                                <div class="encapsula-produto">
+                                    {if $dados[i].hiwin}
+                                        <div class="produto-especial"></div>
+                                    {/if}
+                                    <img src="{$URL}{$dados[i].caminhoThumb}" alt="{$dados[i].titulo}" title="{$dados[i].titulo}">
+                                    <h2 class="titulo-produtos"><a href="{$URL}produto">{$dados[i].titulo}</a></h2>
+                                    <a class="saiba-mais" href="{$URL}produto/{$dados[i].urlAmigavel}/" title="saiba mais sobre esse produto">Saiba mais</a>
+                                </div>
                             </div>
-                        </div>
-                    {/section} 
+                        {/section} 
+                    {/if}
                 </div>
             </article>    
         </section>

@@ -11,7 +11,7 @@
         	<li class="linha-bread">{$url[2]}</li>
         {elseif $url[1]}
         	<li class="seta-bread"> >> </li>
-        	<li class="linha-bread"><a class="link-bread" href="{$URL}{if $url[0] == "noticia"}noticias{else}{$url[0]}{/if}">{if $url[0] == "noticia"} noticias {elseif $url[0] == "fale-conosco"} Fale Conosco {else} {$url[0]} {/if}</a></li>
+        	<li class="linha-bread"><a class="link-bread" href="{$URL}{if $url[0] == "noticia"}noticias{elseif $url[0] == "produto"}produtos{else}{$url[0]}{/if}">{if $url[0] == "noticia"} noticias {elseif $url[0] == "produto"}produtos {elseif $url[0] == "fale-conosco"} Fale Conosco {else} {$url[0]} {/if}</a></li>
         	<li class="seta-bread"> >> </li>
         	<li class="linha-bread">{$url[1]}</li>
         {else}

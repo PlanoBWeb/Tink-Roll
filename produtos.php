@@ -15,8 +15,13 @@
 		exit();
 	}
 
-	$parametro['produtosCat'] 	= $url[1];
-	$parametro['busca'] 		= $_POST['search'];
+	if ($url[1]) {
+		$parametro['produtosCat'] 	= $url[1];	
+	}elseif ($_POST['search']) {
+		$parametro['busca'] 		= $_POST['search'];	
+	}else{
+		$parametro['prodHiwin'] 		= "1";	
+	}
 	$retorno 					= $class->Pesquisar($parametro, null, null);
 	if( $retorno[0] )
 	{
@@ -27,15 +32,17 @@
 	}
 
 	// Busca ajax
-	if ($retorno[1]) {
-		foreach ($retorno[1] as $key) {
-			echo '
-				<ul class="carrega-busca-ajax">					    		
-					<li class="selectProduto">'.$key["titulo"].'</li>
-				</ul>
-			';
+	if ($parametro['busca']) {
+		if ($retorno[1]) {
+			foreach ($retorno[1] as $key) {
+				echo '
+					<ul class="carrega-busca-ajax">					    		
+						<li class="selectProduto">'.$key["titulo"].'</li>
+					</ul>
+				';
+			}	
 		}	
-	}
+	}	
 	// Busca ajax
 
 	$smarty->assign("dadosCategoria", $retornoCategoria[1]);

@@ -338,10 +338,10 @@ class Produto
 			$query .= " AND produto.id = '".$post['id']."' ";
 		}
 
-		// if($post['produto'])
-		// {
-		// 	$query .= " AND P.pagina = '".$post['produto']."' ";
-		// }
+		if($post['prodHiwin'])
+		{
+			$query .= " AND P.hiwin = '".$post['prodHiwin']."' ";
+		}
 
 		if($post['produto'])
 		{
@@ -349,23 +349,17 @@ class Produto
 		}
 
 
-		// if($post['produtosCat'])
-		// {
-		// 	$joinCategoria = "
-		// 		INNER JOIN	
-		// 			categoria C
-		// 		ON 
-		// 			P.idCategoria = C.id
-		// 	";
+		if($post['produtosCat'])
+		{
+			$joinCategoria = "
+				INNER JOIN	
+					categoria C
+				ON 
+					P.idCategoria = C.id
+			";
 
-		// 	$query .= " AND C.urlAmigavel = '".$post['produtosCat']."' ";
-		// }
-
-		// Nao uso pra nada
-		// if($post['busca'])
-		// {
-		// 	$query .= " AND C.descricao LIKE '%".$post['busca']."%' ";
-		// }
+			$query .= " AND C.urlAmigavel = '".$post['produtosCat']."' ";
+		}
 
 		if($post['busca'])
 		{
@@ -406,6 +400,7 @@ class Produto
 			$dados[$i] 						= $rows;
 			$dados[$i]['tituloProduto'] 	= utf8_encode($rows['tituloProduto']);
 			$dados[$i]['titulo']		 	= utf8_encode($rows['titulo']);
+			$dados[$i]['descricao']		 	= nl2br(utf8_encode($rows['descricao']));
 			$i++;
 		}
 		

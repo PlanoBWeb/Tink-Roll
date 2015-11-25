@@ -900,6 +900,15 @@ footer
 {
     margin-right: 15px;
     margin-bottom: 15px;
+    display: table;
+    margin: auto;
+}
+
+.img-desc-prod
+{
+    border: solid 1px #ddd;
+    margin-right: 15px;
+    margin-bottom: 15px;
 }
 
 .titulo-produto
@@ -1024,6 +1033,10 @@ footer
     font-weight: bold;
 }
 
+.img-borda-interna
+{
+    border: solid 1px #999;
+}
 
 
 
