@@ -52,42 +52,20 @@
                         <div class="linha-separador"></div>
                         <div class="bloco-roda-vitrine">
                             <div class="encapsula-produto-vitrine">
-                                <div class="col-xs-12 col-sm-4 col-md-4 pd-produto-destaque produto-vitrine">
+                                {section name=i loop=$dadosProd}
+                                    <div class="col-xs-12 col-sm-4 col-md-4 pd-produto-destaque produto-vitrine">
+                                        <div class="bloco-produto-destaque">
+                                            <img class="img-produto-destaque" src="{$URL}{$dadosProd[i].caminhoThumb}" alt="Produto" title="Produto">
+                                            <a href="{$URL}produto/{$dadosProd[i].urlAmigavel}" class="titulo-produto-destaque">{$dadosProd[i].titulo}</a>
+                                        </div>
+                                    </div>
+                                {/section} 
+                                <!-- <div class="col-xs-12 col-sm-4 col-md-4 pd-produto-destaque produto-vitrine">
                                     <div class="bloco-produto-destaque">
                                         <img class="img-produto-destaque" src="{$URL}commom/img/produto.png" alt="Produto" title="Produto">
                                         <a href="{$URL}" class="titulo-produto-destaque">Produto teste</a>
                                     </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4 col-md-4 pd-produto-destaque produto-vitrine">
-                                    <div class="bloco-produto-destaque">
-                                        <img class="img-produto-destaque" src="{$URL}commom/img/produto.png" alt="Produto" title="Produto">
-                                        <a href="{$URL}" class="titulo-produto-destaque">Produto teste</a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4 col-md-4 pd-produto-destaque produto-vitrine">
-                                    <div class="bloco-produto-destaque">
-                                        <img class="img-produto-destaque" src="{$URL}commom/img/produto.png" alt="Produto" title="Produto">
-                                        <a href="{$URL}" class="titulo-produto-destaque">Produto teste</a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4 col-md-4 pd-produto-destaque produto-vitrine">
-                                    <div class="bloco-produto-destaque">
-                                        <img class="img-produto-destaque" src="{$URL}commom/img/produto.png" alt="Produto" title="Produto">
-                                        <a href="{$URL}" class="titulo-produto-destaque">Produto teste2</a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4 col-md-4 pd-produto-destaque produto-vitrine">
-                                    <div class="bloco-produto-destaque">
-                                        <img class="img-produto-destaque" src="{$URL}commom/img/produto.png" alt="Produto" title="Produto">
-                                        <a href="{$URL}" class="titulo-produto-destaque">Produto teste2</a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4 col-md-4 pd-produto-destaque produto-vitrine">
-                                    <div class="bloco-produto-destaque">
-                                        <img class="img-produto-destaque" src="{$URL}commom/img/produto.png" alt="Produto" title="Produto">
-                                        <a href="{$URL}" class="titulo-produto-destaque">Produto teste2</a>
-                                    </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="row">

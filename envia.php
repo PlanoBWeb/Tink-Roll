@@ -26,11 +26,11 @@ if (empty($_POST['nome'])|| empty($_POST['email'])|| empty($_POST['telefone'])||
   $headers 	.= "Content-type: text/plain; charset=UTF-8\n";
   $assunto 	.= "Tink Roll - Contato";
   $conteudo 	.= "$cont\r\n";
-  $headers 	.= "From: joseygor@planobweb.com.br\n"; 
-  $headers 	.= "Return-Path: joseygor@planobweb.com.br\r\n"; 
+  $headers 	.= "From: tinkroll@tinkroll.com.br\n"; 
+  $headers 	.= "Return-Path: tinkroll@tinkroll.com.br\r\n"; 
   //$headers 	.= "Bcc: contato@planobweb.com.br\r\n"; // cópia
   $headers 	.= "Reply-To: $email\n";
-  $envio 		= mail("joseygor@planobweb.com.br", $assunto,$conteudo,$headers);
+  $envio 		= mail("tinkroll@tinkroll.com.br", $assunto,$conteudo,$headers);
   
   echo "<script>location.href ='obrigado-contato'</script>";
 }

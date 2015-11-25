@@ -41,12 +41,12 @@ if( $_SERVER['SERVER_NAME'] == 'planobweb' || $_SERVER['SERVER_NAME'] == '192.16
 else
 {
 	/* DADOS Online  */
-	define("db_host", '179.188.16.43');
-	define("db_user", 'planobweb212');
-	define("db_pass", 'teste123');
-	define("db_base", 'planobweb212');
-	//define("PATH_SERVIDOR","E:/Home/planobweb2/Web/extranet/");
-	define("URL","http://planobweb/clientes/TinkRoll/Web/");
+	define("db_host", '179.188.16.86');
+	define("db_user", 'tinkroll');
+	define("db_pass", 'ti9059ll');
+	define("db_base", 'tinkroll');
+	define("PATH_SERVIDOR","E:/Home/tinkroll/Web/Homologacao/");
+	define("URL","http://tinkroll.com.br/Homologacao/");
 }
 
 //Acesso ao MyAdmin

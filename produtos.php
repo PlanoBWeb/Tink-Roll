@@ -15,10 +15,21 @@
 		exit();
 	}
 
-	if ($url[1]) {
+	// if ($url[1]) {
+	// 	$parametro['produtosCat'] 	= $url[1];	
+	// }elseif ($_POST['search']) {
+	// 	$parametro['busca'] 		= $_POST['search'];	
+	// }else{
+	// 	$parametro['prodHiwin'] 		= "1";	
+	// }
+	if ($_POST['search'] || $_POST['searchMobile']) {
+		if ($_POST['searchMobile']) {
+			$parametro['busca'] 		= $_POST['searchMobile'];	
+		}else{
+			$parametro['busca'] 		= $_POST['search'];	
+		}
+	}elseif ($url[1]) {
 		$parametro['produtosCat'] 	= $url[1];	
-	}elseif ($_POST['search']) {
-		$parametro['busca'] 		= $_POST['search'];	
 	}else{
 		$parametro['prodHiwin'] 		= "1";	
 	}

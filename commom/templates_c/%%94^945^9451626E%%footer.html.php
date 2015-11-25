@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-18 18:25:14
+<?php /* Smarty version 2.6.12, created on 2015-11-25 18:01:33
          compiled from ../inc/footer.html */ ?>
 <footer>
     <article class="bloco-footer">
@@ -6,28 +6,30 @@
             <a href="<?php echo $this->_tpl_vars['URL']; ?>
 home" class="logo-footer" alt="Tink Roll"><img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/logo.png" alt="Tink Roll" title="Tink Roll"></a>
-            <p class="txt-desta-default">Nossos produtos:</p>
+            <!-- <p class="txt-desta-default">Nossos produtos:</p> -->
             <ul>
                 <li class="linha-menu-rodape"><a href="<?php echo $this->_tpl_vars['URL']; ?>
-" class="link-menu-rodape">Produtos Especiais Hiwin</a></li>
+institucional" class="link-menu-rodape">Institucional</a></li>
+                <li class="linha-menu-rodape"><span href="<?php echo $this->_tpl_vars['URL']; ?>
+" class="link-menu-rodape"> | </span></li>
                 <li class="linha-menu-rodape"><a href="<?php echo $this->_tpl_vars['URL']; ?>
-" class="link-menu-rodape"> | </a></li>
+produtos" class="link-menu-rodape">Produtos</a></li>
+                <li class="linha-menu-rodape"><span href="<?php echo $this->_tpl_vars['URL']; ?>
+" class="link-menu-rodape"> | </span></li>
                 <li class="linha-menu-rodape"><a href="<?php echo $this->_tpl_vars['URL']; ?>
-" class="link-menu-rodape">Produtos</a></li>
+marcas" class="link-menu-rodape">Marcas</a></li>
+                <li class="linha-menu-rodape"><span href="<?php echo $this->_tpl_vars['URL']; ?>
+" class="link-menu-rodape"> | </span></li>
                 <li class="linha-menu-rodape"><a href="<?php echo $this->_tpl_vars['URL']; ?>
-" class="link-menu-rodape"> | </a></li>
+noticias" class="link-menu-rodape">Notícias</a></li>
+                <li class="linha-menu-rodape"><span href="<?php echo $this->_tpl_vars['URL']; ?>
+" class="link-menu-rodape"> | </span></li>
                 <li class="linha-menu-rodape"><a href="<?php echo $this->_tpl_vars['URL']; ?>
-" class="link-menu-rodape">Produtos Especiais Hiwin</a></li>
+localizacao" class="link-menu-rodape">Localização</a></li>
+                <li class="linha-menu-rodape"><span href="<?php echo $this->_tpl_vars['URL']; ?>
+" class="link-menu-rodape"> | </span></li>
                 <li class="linha-menu-rodape"><a href="<?php echo $this->_tpl_vars['URL']; ?>
-" class="link-menu-rodape"> | </a></li>
-                <li class="linha-menu-rodape"><a href="<?php echo $this->_tpl_vars['URL']; ?>
-" class="link-menu-rodape">Produtos Hiwin</a></li>
-                <li class="linha-menu-rodape"><a href="<?php echo $this->_tpl_vars['URL']; ?>
-" class="link-menu-rodape"> | </a></li>
-                <li class="linha-menu-rodape"><a href="<?php echo $this->_tpl_vars['URL']; ?>
-" class="link-menu-rodape">Produtos Especiais Hiwin</a></li>
-                <li class="linha-menu-rodape"><a href="<?php echo $this->_tpl_vars['URL']; ?>
-" class="link-menu-rodape"> | </a></li>
+fale-conosco" class="link-menu-rodape">Contato</a></li>
                 <!-- <li class="linha-menu-rodape"><a href="<?php echo $this->_tpl_vars['URL']; ?>
 " class="link-menu-rodape"></a></li> -->
             </ul>
@@ -264,7 +266,7 @@ commom/js/vitrine/owl.carousel.js"></script>
 
                 $.ajax({
                 type: "POST",
-                url: "produtos",
+                url: "produtos/",
                 // data:\'busca=\'+$(this).val(),
                 data: {search: valorBusca, buscaAjax: "buscaAjax"},
           
@@ -285,6 +287,43 @@ commom/js/vitrine/owl.carousel.js"></script>
 
         $("#buscaValor").val(valorTxtBusca);
         $("#carrega-busca").hide();
+        
+    });
+
+
+    // Ajax Busca Mobile
+    //url: "http://tinkroll.com.br/Homologacao/produtos/",
+    $(document).ready(function(){
+        $("#buscaValorMobile").keyup(function(){
+            var valorBusca = $(\'#buscaValorMobile\').val();
+            var min_length = 0;
+            var contaValor = $(\'#buscaValorMobile\').val().length;
+
+            if (contaValor != min_length) {
+
+                $.ajax({
+                type: "POST",
+                url: "produtos/",
+                // data:\'busca=\'+$(this).val(),
+                data: {search: valorBusca, buscaAjax: "buscaAjax"},
+          
+                    success: function(data){
+                        $("#carrega-busca-Mobile").show();
+                        $("#carrega-busca-Mobile").html(data);
+                        $("#buscaValorMobile").css("background","#FFF");
+                    }
+                });
+            }else{
+                  $(\'#carrega-busca-Mobile\').hide();
+            }
+        });
+    });
+
+    $(\'#carrega-busca-Mobile\').on(\'click\',\'.selectProduto\', function(){
+        var valorTxtBusca = $(this).text();
+
+        $("#buscaValorMobile").val(valorTxtBusca);
+        $("#carrega-busca-Mobile").hide();
         
     });
 

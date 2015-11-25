@@ -361,9 +361,29 @@ class Produto
 			$query .= " AND C.urlAmigavel = '".$post['produtosCat']."' ";
 		}
 
+		if ($post['innerManual']) {
+			$join = "
+				LEFT JOIN	
+					pdf 
+				ON 
+					P.id = pdf.idProduto
+			";
+
+			$selecCampo = "
+					,pdf.idProduto,
+					pdf.caminhoPdf,
+					pdf.titulo AS tituloPdf
+			";
+		}
+
 		if($post['busca'])
 		{
 			$query .= " AND P.titulo LIKE '%".$post['busca']."%' ";
+		}
+
+		if($post['destaque'])
+		{
+			$query .= " AND P.destaque = '".$post['destaque']."' ";
 		}
 
 		$retorno = array();
@@ -372,6 +392,7 @@ class Produto
 					P.*,
 					C.id AS idCat,
 					C.titulo AS tituloCat
+					". $selecCampo ."
 				FROM  
 					" . $this->entidade . " P " .
 				
@@ -380,11 +401,13 @@ class Produto
 					categoria C
 				ON 
 					P.idCategoria = C.id
+				" . $join . " 
 				WHERE
 					1 = 1 ".$query."
 				ORDER BY
 					P.id DESC
 			".$sqlLimit." ";
+
 
 		$result = mysql_query($sql);
 		if (!($result))
@@ -400,6 +423,8 @@ class Produto
 			$dados[$i] 						= $rows;
 			$dados[$i]['tituloProduto'] 	= utf8_encode($rows['tituloProduto']);
 			$dados[$i]['titulo']		 	= utf8_encode($rows['titulo']);
+			$dados[$i]['tituloPdf']		 	= utf8_encode($rows['tituloPdf']);
+			$dados[$i]['subTitulo']		 	= utf8_encode($rows['subTitulo']);
 			$dados[$i]['descricao']		 	= nl2br(utf8_encode($rows['descricao']));
 			$i++;
 		}

@@ -456,6 +456,7 @@ footer
     padding: 10px 0px;
     background-color: #fff;
     border: 1px solid #bebebe;
+    height: 180px;
 }
 
 .img-produto-destaque
@@ -966,11 +967,11 @@ footer
     padding-left: 13px !important;
 }
 
-.encapsula-pdf-pag
+/*.encapsula-pdf-pag
 {
     position: absolute !important; 
     right: 0px;
-}
+}*/
 
 .encapsula-menu-lateral-pag
 {
@@ -1246,6 +1247,12 @@ footer
     .encapsula-pdf-pag
     {
         position: relative !important;
+    }
+
+    .carrega-busca
+    {
+        width: 270px;
+        position: relative;
     }
 }
 

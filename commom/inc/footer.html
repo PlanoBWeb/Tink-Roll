@@ -2,18 +2,19 @@
     <article class="bloco-footer">
         <div class="col-xs-12 col-sm-4 col-md-4 bloco-conteudo-footer">
             <a href="{$URL}home" class="logo-footer" alt="Tink Roll"><img src="{$URL}commom/img/logo.png" alt="Tink Roll" title="Tink Roll"></a>
-            <p class="txt-desta-default">Nossos produtos:</p>
+            <!-- <p class="txt-desta-default">Nossos produtos:</p> -->
             <ul>
-                <li class="linha-menu-rodape"><a href="{$URL}" class="link-menu-rodape">Produtos Especiais Hiwin</a></li>
-                <li class="linha-menu-rodape"><a href="{$URL}" class="link-menu-rodape"> | </a></li>
-                <li class="linha-menu-rodape"><a href="{$URL}" class="link-menu-rodape">Produtos</a></li>
-                <li class="linha-menu-rodape"><a href="{$URL}" class="link-menu-rodape"> | </a></li>
-                <li class="linha-menu-rodape"><a href="{$URL}" class="link-menu-rodape">Produtos Especiais Hiwin</a></li>
-                <li class="linha-menu-rodape"><a href="{$URL}" class="link-menu-rodape"> | </a></li>
-                <li class="linha-menu-rodape"><a href="{$URL}" class="link-menu-rodape">Produtos Hiwin</a></li>
-                <li class="linha-menu-rodape"><a href="{$URL}" class="link-menu-rodape"> | </a></li>
-                <li class="linha-menu-rodape"><a href="{$URL}" class="link-menu-rodape">Produtos Especiais Hiwin</a></li>
-                <li class="linha-menu-rodape"><a href="{$URL}" class="link-menu-rodape"> | </a></li>
+                <li class="linha-menu-rodape"><a href="{$URL}institucional" class="link-menu-rodape">Institucional</a></li>
+                <li class="linha-menu-rodape"><span href="{$URL}" class="link-menu-rodape"> | </span></li>
+                <li class="linha-menu-rodape"><a href="{$URL}produtos" class="link-menu-rodape">Produtos</a></li>
+                <li class="linha-menu-rodape"><span href="{$URL}" class="link-menu-rodape"> | </span></li>
+                <li class="linha-menu-rodape"><a href="{$URL}marcas" class="link-menu-rodape">Marcas</a></li>
+                <li class="linha-menu-rodape"><span href="{$URL}" class="link-menu-rodape"> | </span></li>
+                <li class="linha-menu-rodape"><a href="{$URL}noticias" class="link-menu-rodape">Notícias</a></li>
+                <li class="linha-menu-rodape"><span href="{$URL}" class="link-menu-rodape"> | </span></li>
+                <li class="linha-menu-rodape"><a href="{$URL}localizacao" class="link-menu-rodape">Localização</a></li>
+                <li class="linha-menu-rodape"><span href="{$URL}" class="link-menu-rodape"> | </span></li>
+                <li class="linha-menu-rodape"><a href="{$URL}fale-conosco" class="link-menu-rodape">Contato</a></li>
                 <!-- <li class="linha-menu-rodape"><a href="{$URL}" class="link-menu-rodape"></a></li> -->
             </ul>
         </div>
@@ -241,7 +242,7 @@
 
                 $.ajax({
                 type: "POST",
-                url: "produtos",
+                url: "produtos/",
                 // data:'busca='+$(this).val(),
                 data: {search: valorBusca, buscaAjax: "buscaAjax"},
           
@@ -262,6 +263,43 @@
 
         $("#buscaValor").val(valorTxtBusca);
         $("#carrega-busca").hide();
+        
+    });
+
+
+    // Ajax Busca Mobile
+    //url: "http://tinkroll.com.br/Homologacao/produtos/",
+    $(document).ready(function(){
+        $("#buscaValorMobile").keyup(function(){
+            var valorBusca = $('#buscaValorMobile').val();
+            var min_length = 0;
+            var contaValor = $('#buscaValorMobile').val().length;
+
+            if (contaValor != min_length) {
+
+                $.ajax({
+                type: "POST",
+                url: "produtos/",
+                // data:'busca='+$(this).val(),
+                data: {search: valorBusca, buscaAjax: "buscaAjax"},
+          
+                    success: function(data){
+                        $("#carrega-busca-Mobile").show();
+                        $("#carrega-busca-Mobile").html(data);
+                        $("#buscaValorMobile").css("background","#FFF");
+                    }
+                });
+            }else{
+                  $('#carrega-busca-Mobile').hide();
+            }
+        });
+    });
+
+    $('#carrega-busca-Mobile').on('click','.selectProduto', function(){
+        var valorTxtBusca = $(this).text();
+
+        $("#buscaValorMobile").val(valorTxtBusca);
+        $("#carrega-busca-Mobile").hide();
         
     });
 

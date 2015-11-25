@@ -17,8 +17,9 @@
 
 	// $parametro['produtosCat'] 	= $url[1];
 	// $parametro['produto'] 		= $url[2];
-	$parametro['produto'] 		= $url[1];
 	// $parametro['produtosCat'] 	= $_POST['search'];
+	$parametro['produto'] 		= $url[1];
+	$parametro['innerManual'] 	= 1;
 	$retorno 					= $class->Pesquisar($parametro, null, null);
 	if( $retorno[0] )
 	{
@@ -27,6 +28,11 @@
 		$smarty->display("mensagem.html");
 		exit();
 	}
+
+	// echo "<pre>";
+	// print_r($retorno);
+	// die();
+
 
 	$smarty->assign("pagInclude", $retorno[1][0]['filePagina']);
 	$smarty->assign("dadosCategoria", $retornoCategoria[1]);

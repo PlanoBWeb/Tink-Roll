@@ -1,7 +1,9 @@
 <?php
 	include_once "configs/config.php";
 	include_once "classes/Noticias.class.php";
-	$class = new Noticias();
+	include_once "classes/Produto.class.php";
+	$class 		= new Noticias();
+	$classProd 	= new Produto();
 
 	include_once "classes/Newsletter.class.php";
 	$classNewsletter = new Newsletter();
@@ -10,6 +12,16 @@
 	if( $retorno[0] )
 	{
 		$smarty->assign("mensagem", $retorno[1]);
+		$smarty->assign("redir", "adm_" . $pagina . ".php");
+		$smarty->display("mensagem.html");
+		exit();
+	}
+
+	$parametro['destaque'] = 1;
+	$retornoProd	= $classProd->Pesquisar($parametro, null, null);
+	if( $retornoProd[0] )
+	{
+		$smarty->assign("mensagem", $retornoProd[1]);
 		$smarty->assign("redir", "adm_" . $pagina . ".php");
 		$smarty->display("mensagem.html");
 		exit();
@@ -50,17 +62,18 @@
 			$headers 	.= "Content-type: text/plain; charset=UTF-8\n";
 			$assunto 	.= "Tink Roll - Newsletter";
 			$conteudo 	.= "$cont\r\n";
-			$headers 	.= "From: joseygor@planobweb.com.br\n"; 
-			$headers 	.= "Return-Path: joseygor@planobweb.com.br\r\n"; 
+			$headers 	.= "From: tinkroll@tinkroll.com.br\n"; 
+			$headers 	.= "Return-Path: tinkroll@tinkroll.com.br\r\n"; 
 			//$headers 	.= "Bcc: contato@planobweb.com.br\r\n"; // cópia
 			$headers 	.= "Reply-To: $email\n";
-			$envio 		= mail("joseygor@planobweb.com.br", $assunto,$conteudo,$headers);
+			$envio 		= mail("tinkroll@tinkroll.com.br", $assunto,$conteudo,$headers);
 
 			echo utf8_decode("<script>alert('Cadastro enviado com sucesso.');location.href ='home'</script>");
 		}
 
 	}
 
+	$smarty->assign("dadosProd", $retornoProd[1]);
 	$smarty->assign("dados", $retorno[1]);
 	$smarty->assign("URL", URL);
 	$smarty->display("index.html");

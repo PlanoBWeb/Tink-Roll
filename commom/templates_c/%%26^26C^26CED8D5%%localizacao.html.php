@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-09 16:54:31
+<?php /* Smarty version 2.6.12, created on 2015-11-25 16:56:55
          compiled from localizacao.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -32,7 +32,7 @@ unset($_smarty_tpl_vars);
  ?>
         <div class="banner-interna hidden-xs">
             <img src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/banner-institucional.jpg" alt="banner institucional" title="banner institucional">
+commom/img/banner-institucional.jpg" alt="banner Localização" title="banner Localização">
             <h1 class="titulo-banner-interna">Localização</h1>
         </div>        
         <section class="conteudo">
@@ -42,10 +42,10 @@ $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
             <article class="bloco-conteudo">
-                <div class="col-xs-12 col-sm-6 col-md-6 mapa-local">
+                <div class="col-xs-12 col-sm-7 col-md-7 mapa-local">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.425717952524!2d-46.60248448502104!3d-23.624920384651286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5b6453d4695b%3A0x109148dc3a61cea4!2sR.+Bertolina+Maria%2C+54+-+Vila+Vermelha%2C+S%C3%A3o+Paulo+-+SP%2C+04298-090!5e0!3m2!1spt-BR!2sbr!4v1446741558207" allowfullscreen></iframe>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="col-xs-12 col-sm-5 col-md-5">
                     <h2 class="titulo-interna-destaque mg-top-none">Conheça nossa loja!</h2><br><br>
                     <h3 class="titulo-interna-destaque titulo-cor-cinza">Localização:</h3>
                     <p class="txt-interna mg-bottom-none">Rua Bertolina Maria, 54</p>

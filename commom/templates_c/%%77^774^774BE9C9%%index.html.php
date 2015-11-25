@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-11 10:06:53
+<?php /* Smarty version 2.6.12, created on 2015-11-25 17:49:18
          compiled from index.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -66,54 +66,49 @@ commom/img/banner.jpg" alt="banner" title="banner"></div>
                         <div class="linha-separador"></div>
                         <div class="bloco-roda-vitrine">
                             <div class="encapsula-produto-vitrine">
-                                <div class="col-xs-12 col-sm-4 col-md-4 pd-produto-destaque produto-vitrine">
+                                <?php unset($this->_sections['i']);
+$this->_sections['i']['name'] = 'i';
+$this->_sections['i']['loop'] = is_array($_loop=$this->_tpl_vars['dadosProd']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$this->_sections['i']['show'] = true;
+$this->_sections['i']['max'] = $this->_sections['i']['loop'];
+$this->_sections['i']['step'] = 1;
+$this->_sections['i']['start'] = $this->_sections['i']['step'] > 0 ? 0 : $this->_sections['i']['loop']-1;
+if ($this->_sections['i']['show']) {
+    $this->_sections['i']['total'] = $this->_sections['i']['loop'];
+    if ($this->_sections['i']['total'] == 0)
+        $this->_sections['i']['show'] = false;
+} else
+    $this->_sections['i']['total'] = 0;
+if ($this->_sections['i']['show']):
+
+            for ($this->_sections['i']['index'] = $this->_sections['i']['start'], $this->_sections['i']['iteration'] = 1;
+                 $this->_sections['i']['iteration'] <= $this->_sections['i']['total'];
+                 $this->_sections['i']['index'] += $this->_sections['i']['step'], $this->_sections['i']['iteration']++):
+$this->_sections['i']['rownum'] = $this->_sections['i']['iteration'];
+$this->_sections['i']['index_prev'] = $this->_sections['i']['index'] - $this->_sections['i']['step'];
+$this->_sections['i']['index_next'] = $this->_sections['i']['index'] + $this->_sections['i']['step'];
+$this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
+$this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
+?>
+                                    <div class="col-xs-12 col-sm-4 col-md-4 pd-produto-destaque produto-vitrine">
+                                        <div class="bloco-produto-destaque">
+                                            <img class="img-produto-destaque" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dadosProd'][$this->_sections['i']['index']]['caminhoThumb']; ?>
+" alt="Produto" title="Produto">
+                                            <a href="<?php echo $this->_tpl_vars['URL']; ?>
+produto/<?php echo $this->_tpl_vars['dadosProd'][$this->_sections['i']['index']]['urlAmigavel']; ?>
+" class="titulo-produto-destaque"><?php echo $this->_tpl_vars['dadosProd'][$this->_sections['i']['index']]['titulo']; ?>
+</a>
+                                        </div>
+                                    </div>
+                                <?php endfor; endif; ?> 
+                                <!-- <div class="col-xs-12 col-sm-4 col-md-4 pd-produto-destaque produto-vitrine">
                                     <div class="bloco-produto-destaque">
                                         <img class="img-produto-destaque" src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/produto.png" alt="Produto" title="Produto">
                                         <a href="<?php echo $this->_tpl_vars['URL']; ?>
 " class="titulo-produto-destaque">Produto teste</a>
                                     </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4 col-md-4 pd-produto-destaque produto-vitrine">
-                                    <div class="bloco-produto-destaque">
-                                        <img class="img-produto-destaque" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/produto.png" alt="Produto" title="Produto">
-                                        <a href="<?php echo $this->_tpl_vars['URL']; ?>
-" class="titulo-produto-destaque">Produto teste</a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4 col-md-4 pd-produto-destaque produto-vitrine">
-                                    <div class="bloco-produto-destaque">
-                                        <img class="img-produto-destaque" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/produto.png" alt="Produto" title="Produto">
-                                        <a href="<?php echo $this->_tpl_vars['URL']; ?>
-" class="titulo-produto-destaque">Produto teste</a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4 col-md-4 pd-produto-destaque produto-vitrine">
-                                    <div class="bloco-produto-destaque">
-                                        <img class="img-produto-destaque" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/produto.png" alt="Produto" title="Produto">
-                                        <a href="<?php echo $this->_tpl_vars['URL']; ?>
-" class="titulo-produto-destaque">Produto teste2</a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4 col-md-4 pd-produto-destaque produto-vitrine">
-                                    <div class="bloco-produto-destaque">
-                                        <img class="img-produto-destaque" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/produto.png" alt="Produto" title="Produto">
-                                        <a href="<?php echo $this->_tpl_vars['URL']; ?>
-" class="titulo-produto-destaque">Produto teste2</a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4 col-md-4 pd-produto-destaque produto-vitrine">
-                                    <div class="bloco-produto-destaque">
-                                        <img class="img-produto-destaque" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/produto.png" alt="Produto" title="Produto">
-                                        <a href="<?php echo $this->_tpl_vars['URL']; ?>
-" class="titulo-produto-destaque">Produto teste2</a>
-                                    </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="row">

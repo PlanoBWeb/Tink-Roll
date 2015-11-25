@@ -1,6 +1,7 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-06 10:57:07
+<?php /* Smarty version 2.6.12, created on 2015-11-25 17:47:25
          compiled from ../inc/form.html */ ?>
-<form method="post" action="envia" name="contato">
+<form method="post" action="<?php echo $this->_tpl_vars['URL']; ?>
+envia" name="contato">
     <div class="form-group">
         <input type="text" name="nome" class="form-control" placeholder="Nome*">
     </div>

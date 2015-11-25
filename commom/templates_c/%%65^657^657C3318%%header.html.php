@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-18 18:24:16
+<?php /* Smarty version 2.6.12, created on 2015-11-25 17:57:50
          compiled from ../inc/header.html */ ?>
 <header>
     <div class="encapsula-topo">
@@ -32,12 +32,14 @@ commom/img/lupaBusca.png" alt="busca" title="busca">
                 <a class="navbar-brand" href="<?php echo $this->_tpl_vars['URL']; ?>
 home"><img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/logo.png" alt="Tink Roll" title="Tink Roll"></a>
-                <form class="navbar-form navbar-left search-mobile" role="search">
+                <form class="navbar-form navbar-left search-mobile" action="<?php echo $this->_tpl_vars['URL']; ?>
+produtos" role="search" method="post">
                     <div class="form-group">
-                      <input type="text" class="form-control busca-topo busca-topo-mobile" placeholder="Busca">
+                      <input type="text" class="form-control busca-topo busca-topo-mobile" name="searchMobile" id="buscaValorMobile" autocomplete="off" placeholder="Busca">
                     </div>
                     <button type="submit" class="buscar-topo"><img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/lupa.png" alt="buscar"></button>
+                    <div  id="carrega-busca-Mobile" class="carrega-busca"></div>
                 </form>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -50,6 +52,9 @@ institucional">Institucional </a>   </li>
                     <li class="barra-menu hidden-xs">|</li>
                     <li class="linha-menu-topo"><a class="link-menu-topo" href="<?php echo $this->_tpl_vars['URL']; ?>
 produtos">Produtos </a>   </li>
+                    <li class="barra-menu hidden-xs">|</li>
+                    <li class="linha-menu-topo"><a class="link-menu-topo" href="<?php echo $this->_tpl_vars['URL']; ?>
+manutencao">Manutenção </a>   </li>
                     <li class="barra-menu hidden-xs">|</li>
                     <li class="linha-menu-topo"><a class="link-menu-topo" href="<?php echo $this->_tpl_vars['URL']; ?>
 marcas">Marcas </a>   </li>

@@ -2,9 +2,10 @@
 	$url = $_SERVER['REQUEST_URI'];
 	$url = substr($url, 1);
 	$url = str_replace("clientes/TinkRoll/Web/", "", $url);
+	// $url = str_replace("Homologacao/", "", $url);
 	$url = explode('/', $url);
 	
-	$permissao  = array('home', 'index', 'institucional', 'localizacao','produtos', 'marcas', 'fale-conosco', 'envia', 'obrigado-contato','produto', 'noticias', 'noticia');
+	$permissao  = array('home', 'index', 'institucional', 'localizacao','produtos', 'marcas', 'fale-conosco', 'envia', 'obrigado-contato','produto', 'noticias', 'noticia', 'manutencao');
 	$marcas 	= array("bgl", "hiwin", "ina-flag", "ktr", "nachi", "metalflex-acoplamentos", "rolmax", "sabo", "sav", "skf", "timken");
 
 	if ($url[0] == "" || $url[0] == "index") {

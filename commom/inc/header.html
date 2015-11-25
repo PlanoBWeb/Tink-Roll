@@ -24,11 +24,12 @@
                 </button>
                 <img class="busca-mobile visible-xs-block" src="{$URL}commom/img/lupaBusca.png" alt="busca" title="busca">
                 <a class="navbar-brand" href="{$URL}home"><img src="{$URL}commom/img/logo.png" alt="Tink Roll" title="Tink Roll"></a>
-                <form class="navbar-form navbar-left search-mobile" role="search">
+                <form class="navbar-form navbar-left search-mobile" action="{$URL}produtos" role="search" method="post">
                     <div class="form-group">
-                      <input type="text" class="form-control busca-topo busca-topo-mobile" placeholder="Busca">
+                      <input type="text" class="form-control busca-topo busca-topo-mobile" name="searchMobile" id="buscaValorMobile" autocomplete="off" placeholder="Busca">
                     </div>
                     <button type="submit" class="buscar-topo"><img src="{$URL}commom/img/lupa.png" alt="buscar"></button>
+                    <div  id="carrega-busca-Mobile" class="carrega-busca"></div>
                 </form>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -38,6 +39,8 @@
                     <li class="linha-menu-topo"><a class="link-menu-topo" href="{$URL}institucional">Institucional </a>   </li>
                     <li class="barra-menu hidden-xs">|</li>
                     <li class="linha-menu-topo"><a class="link-menu-topo" href="{$URL}produtos">Produtos </a>   </li>
+                    <li class="barra-menu hidden-xs">|</li>
+                    <li class="linha-menu-topo"><a class="link-menu-topo" href="{$URL}manutencao">Manutenção </a>   </li>
                     <li class="barra-menu hidden-xs">|</li>
                     <li class="linha-menu-topo"><a class="link-menu-topo" href="{$URL}marcas">Marcas </a>   </li>
                     <li class="barra-menu hidden-xs">|</li>

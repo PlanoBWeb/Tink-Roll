@@ -50,12 +50,17 @@
                                         <p class="titulo-interna-destaque titulo-cor-cinza mg-left-desc-prod">Categoria</p>
                                         <p class="txt-interna mg-left-desc-prod">{$dados[0].tituloCat}</p>
                                     </div>   
-                                    <div class="col-xs-12 col-sm-6 col-md-6 pd-none encapsula-pdf-pag" >
-                                        <a href="{$URL}{$dados[0].pdf}" target="_blank" class="txt-interna">
+                                    {if $dados[0].caminhoPdf}
+                                        <div class="col-xs-12 col-sm-6 col-md-6 pd-none encapsula-pdf-pag" >
                                             <img class="pull-left" src="{$URL}commom/img/manual.png" title="manual" alt="manual">
                                             <p class="titulo-interna-destaque titulo-cor-cinza mg-left-desc-prod">Manual (pdf)</p>
-                                        </a>
-                                    </div> 
+                                            {section name=i loop=$dados}   
+                                                <a href="{$URL}{$dados[i].caminhoPdf}" target="_blank" class="txt-interna mg-left-desc-prod">
+                                                    {$dados[i].tituloPdf}
+                                                </a><br>
+                                            {/section} 
+                                        </div> 
+                                    {/if}
                                 </div>
                             <!-- </div> -->
                         {/if}
