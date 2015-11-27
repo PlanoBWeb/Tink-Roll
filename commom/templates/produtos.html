@@ -32,7 +32,7 @@
                     {include file="../inc/menu-lateral.html"}
                 </div>
                 <div class="col-xs-12 col-sm-9 col-md-9">
-                    <h1 class="titulo-interna-destaque titulo-cor-cinza">&nbsp;&nbsp;{$dados[0].tituloCat}</h1><br>
+                    <h1 class="titulo-interna-destaque titulo-cor-cinza">&nbsp;&nbsp;{if $valorBusca}{$valorBusca}{else}{$dados[0].tituloCat}{/if}</h1><br>
                     {if $dados < 1}
                         <center><p class="titulo-produto">Nenhum resultado encontrado</p> </center>
                     {else}
@@ -56,7 +56,7 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="pull-right">
                                         {section start=1 name=i loop=$Numpaginas}
-                                            <a  class="txt-interna" href="{$URL}produtos/{if $url[1]}{$url[1]}/{/if}{$Numpaginas[i]}">
+                                            <a  class="txt-interna {if $paginacao == $Numpaginas[i]}link-pag-ativo{/if}" href="{$URL}produtos/{if !is_numeric($url[1])}{$url[1]}/{/if}{$Numpaginas[i]}">
                                                 {$Numpaginas[i]}
                                             </a>
                                         {/section}

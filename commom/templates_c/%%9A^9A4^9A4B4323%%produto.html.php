@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-26 18:38:28
+<?php /* Smarty version 2.6.12, created on 2015-11-27 11:18:41
          compiled from produto.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -64,33 +64,16 @@ unset($_smarty_tpl_vars);
 </h1>
                             <h2 class="titulo-interna-destaque titulo-cor-cinza"><?php echo $this->_tpl_vars['dados'][0]['subTitulo']; ?>
 </h2>
-           
-                            <div class="col-xs-12 col-sm-6 col-md-6 pd-none img-desc-prod">
-                                <img class="img-produto" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][0]['caminhoImagem']; ?>
-" alt="<?php echo $this->_tpl_vars['dados'][0]['titulo']; ?>
-" title="<?php echo $this->_tpl_vars['dados'][0]['titulo']; ?>
-">
-                            </div>
-                            <!-- <div class="col-xs-12 col-sm-6 col-md-6 pd-none encapsula-txt-prod-pag"> -->
-                                <p class="txt-interna"><?php echo $this->_tpl_vars['dados'][0]['descricao']; ?>
-</p>
-                                <div class="col-xs-12 col-sm-12 col-md-12 pd-none">
-                                    <div class="col-xs-12 col-sm-6 col-md-6 pd-none">
+                            
+                            <div class="col-xs-12 col-sm-12 col-md-12 pd-none">
+                                <?php if ($this->_tpl_vars['dados'][0]['caminhoPdf']): ?>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 pd-none encapsula-pdf-pag pull-right" >
                                         <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/categoria.png" title="categoria" alt="categoria">
-                                        <p class="titulo-interna-destaque titulo-cor-cinza mg-left-desc-prod">Categoria</p>
-                                        <h3 class="txt-interna mg-left-desc-prod"><?php echo $this->_tpl_vars['dados'][0]['tituloCat']; ?>
-</h3>
-                                    </div>   
-                                    <?php if ($this->_tpl_vars['dados'][0]['caminhoPdf']): ?>
-                                        <div class="col-xs-12 col-sm-6 col-md-6 pd-none encapsula-pdf-pag" >
-                                            <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/manual.png" title="manual" alt="manual">
-                                            <p class="titulo-interna-destaque titulo-cor-cinza mg-left-desc-prod">Manual (pdf)</p>
-                                            <div class="mtlsr-images-for-lightbox">
-                                                <ul>
-                                                    <li>
-                                                        <?php unset($this->_sections['i']);
+                                        <p class="titulo-interna-destaque titulo-cor-cinza mg-left-desc-prod">Manual (pdf)</p>
+                                        <div class="mtlsr-images-for-lightbox">
+                                            <ul class="pos-abs-manual">
+                                                <?php unset($this->_sections['i']);
 $this->_sections['i']['name'] = 'i';
 $this->_sections['i']['loop'] = is_array($_loop=$this->_tpl_vars['dados']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
 $this->_sections['i']['show'] = true;
@@ -113,25 +96,44 @@ $this->_sections['i']['index_prev'] = $this->_sections['i']['index'] - $this->_s
 $this->_sections['i']['index_next'] = $this->_sections['i']['index'] + $this->_sections['i']['step'];
 $this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
 $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
-?>   
-                                                            <a href="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoPdf']; ?>
+?>  
+                                                    <li>
+                                                        <a href="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoPdf']; ?>
 " target="_blank" >
-                                                                <h3 class="txt-interna mg-left-desc-prod">
-                                                                    <?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['tituloPdf']; ?>
+                                                            <h3 class="txt-interna mg-left-desc-prod">
+                                                                <?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['tituloPdf']; ?>
 
-                                                                </h3>
-                                                            </a>
-                                                        <?php endfor; endif; ?> 
+                                                            </h3>
+                                                        </a>
                                                     </li>
-                                                </ul>
-                                            </div> 
-                                            <div class="mtlsr-lightbox">
-                                                <a href="#" class="close">&#9421;</a>
-                                            </div>
+                                                <?php endfor; endif; ?> 
+                                            </ul>
                                         </div> 
-                                    <?php endif; ?>
+                                        <div class="mtlsr-lightbox">
+                                            <a href="#" class="close">&#9421;</a>
+                                        </div>
+                                    </div> 
+                                <?php endif; ?>
+                                <div class="col-xs-12 col-sm-3 col-md-3 pd-none pull-right">
+                                    <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/categoria.png" title="categoria" alt="categoria">
+                                    <p class="titulo-interna-destaque titulo-cor-cinza mg-left-desc-prod">Categoria</p>
+                                    <p class="txt-interna mg-left-desc-prod"><?php echo $this->_tpl_vars['dados'][0]['tituloCat']; ?>
+</p>
+                                </div>   
+                            </div>
+                            <div class="encapsula-conteudo-produto-pag">
+                                <div class="col-xs-12 col-sm-6 col-md-6 pd-none img-desc-prod">
+                                    <img class="img-produto" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][0]['caminhoImagem']; ?>
+" alt="<?php echo $this->_tpl_vars['dados'][0]['titulo']; ?>
+" title="<?php echo $this->_tpl_vars['dados'][0]['titulo']; ?>
+">
                                 </div>
-                            <!-- </div> -->
+                                <!-- <div class="col-xs-12 col-sm-6 col-md-6 pd-none encapsula-txt-prod-pag"> -->
+                                    <p class="txt-interna"><?php echo $this->_tpl_vars['dados'][0]['descricao']; ?>
+</p>
+                                <!-- </div> -->
+                            </div>
                         <?php endif; ?>
                     </div>
                     <div class="row bloco-form-produto">

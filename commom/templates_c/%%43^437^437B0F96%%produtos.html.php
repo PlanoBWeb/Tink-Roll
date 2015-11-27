@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-26 17:55:48
+<?php /* Smarty version 2.6.12, created on 2015-11-27 12:43:36
          compiled from produtos.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -50,8 +50,7 @@ unset($_smarty_tpl_vars);
  ?>
                 </div>
                 <div class="col-xs-12 col-sm-9 col-md-9">
-                    <h1 class="titulo-interna-destaque titulo-cor-cinza">&nbsp;&nbsp;<?php echo $this->_tpl_vars['dados'][0]['tituloCat']; ?>
-</h1><br>
+                    <h1 class="titulo-interna-destaque titulo-cor-cinza">&nbsp;&nbsp;<?php if ($this->_tpl_vars['valorBusca']):  echo $this->_tpl_vars['valorBusca'];  else:  echo $this->_tpl_vars['dados'][0]['tituloCat'];  endif; ?></h1><br>
                     <?php if ($this->_tpl_vars['dados'] < 1): ?>
                         <center><p class="titulo-produto">Nenhum resultado encontrado</p> </center>
                     <?php else: ?>
@@ -134,8 +133,8 @@ $this->_sections['i']['index_next'] = $this->_sections['i']['index'] + $this->_s
 $this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
 $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
 ?>
-                                            <a  class="txt-interna" href="<?php echo $this->_tpl_vars['URL']; ?>
-produtos/<?php if ($this->_tpl_vars['url'][1]):  echo $this->_tpl_vars['url'][1]; ?>
+                                            <a  class="txt-interna <?php if ($this->_tpl_vars['paginacao'] == $this->_tpl_vars['Numpaginas'][$this->_sections['i']['index']]): ?>link-pag-ativo<?php endif; ?>" href="<?php echo $this->_tpl_vars['URL']; ?>
+produtos/<?php if (! is_numeric ( $this->_tpl_vars['url'][1] )):  echo $this->_tpl_vars['url'][1]; ?>
 /<?php endif;  echo $this->_tpl_vars['Numpaginas'][$this->_sections['i']['index']]; ?>
 ">
                                                 <?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['i']['index']]; ?>

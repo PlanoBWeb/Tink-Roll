@@ -21,8 +21,9 @@
 		}else{
 			$parametro['busca'] 		= $_POST['search'];	
 		}
-	}elseif ($url[1]) {
-		$parametro['produtosCat'] 	= $url[1];	
+	//}elseif (!is_numeric($url[1])) {
+	}elseif (!is_numeric($url[1]) && $url[1] != "") {
+		$parametro['produtosCat'] 		= $url[1];	
 	}else{
 		$parametro['prodHiwin'] 		= "1";	
 	}
@@ -60,13 +61,13 @@
 	// Busca ajax
 	if ($parametro['busca']) {
 		if ($retorno[1]) {
+			echo '<ul class="carrega-busca-ajax">';
 			foreach ($retorno[1] as $key) {
 				echo '
-					<ul class="carrega-busca-ajax">					    		
-						<li class="selectProduto">'.$key["titulo"].'</li>
-					</ul>
+					<li class="selectProduto">'.$key["titulo"].'</li>
 				';
 			}	
+			echo '</ul>';
 		}	
 	}	
 	// Busca ajax
@@ -76,6 +77,14 @@
 		$Numpaginas[$j] = $j;
 	}
 
+	if ($_POST['searchMobile']) {
+		$valorBusca		= $_POST['searchMobile'];	
+	}else{
+		$valorBusca 	= $_POST['search'];	
+	}
+
+	$smarty->assign("paginacao", $paginacao);
+	$smarty->assign("valorBusca", $valorBusca);
 	$smarty->assign("totalPaginas", $totalPaginas);
 	$smarty->assign("Numpaginas", $Numpaginas);
 	$smarty->assign("dadosCategoria", $retornoCategoria[1]);

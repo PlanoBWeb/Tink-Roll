@@ -950,7 +950,7 @@ footer
 {
     margin-left: 37px;
     margin-bottom: 0px;
-    margin-top: 0px;
+    margin-top: 0px !important;
 }
 
 .bloco-form-produto
@@ -981,7 +981,8 @@ footer
 
 .encapsula-conteudo-produto-pag
 {
-    /*max-width: 74%;*/
+    width: 100%;
+    max-width: 74%;
     margin-top: 5%;
     float: left;
 }
@@ -997,11 +998,21 @@ footer
     margin: auto;
 }
 
+.encapsula-conteudo-produto-pag img{
+    display: block;
+    margin: auto;
+}
+
 /*.encapsula-pdf-pag
 {
     position: absolute !important; 
     right: 0px;
 }*/
+
+.pos-abs-manual
+{
+    position: absolute;
+}
 
 .encapsula-menu-lateral-pag
 {
@@ -1069,6 +1080,12 @@ footer
     border: solid 1px #999;
 }
 
+.link-pag-ativo
+{
+    color: #b61313;
+    font-weight: bold;
+}
+
 /* LightBox */
 .mtlsr-images-for-lightbox{
     margin:0 auto;
@@ -1076,7 +1093,7 @@ footer
 }
 
 .mtlsr-images-for-lightbox ul li{
-    float:left;
+    /*float:left;*/
     display:inline;
     /*margin:1%;
     padding:2%;*/
@@ -1355,6 +1372,11 @@ footer
     .carrega-busca
     {
         width: 270px;
+        position: relative;
+    }
+
+    .pos-abs-manual
+    {
         position: relative;
     }
 }

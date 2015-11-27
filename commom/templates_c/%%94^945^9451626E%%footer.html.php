@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-27 10:14:34
+<?php /* Smarty version 2.6.12, created on 2015-11-27 12:42:05
          compiled from ../inc/footer.html */ ?>
 <footer>
     <article class="bloco-footer">

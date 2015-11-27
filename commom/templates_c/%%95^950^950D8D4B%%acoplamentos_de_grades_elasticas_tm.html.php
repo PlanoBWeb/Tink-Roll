@@ -1,6 +1,38 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-24 12:07:52
+<?php /* Smarty version 2.6.12, created on 2015-11-27 11:14:33
          compiled from ../templates/acoplamentos_de_grades_elasticas_tm.html */ ?>
-<div class="col-xs-12 col-sm-12 col-md-12 pd-none encapsula-txt-prod-pag">
+<h1 class="titulo-produto">Acoplamentos De Grades Elásticas TM</h1>
+<h2 class="titulo-interna-destaque titulo-cor-cinza">LINHA TM</h2>
+<div class="col-xs-12 col-sm-12 col-md-12 pd-none">
+    <div class="col-xs-12 col-sm-3 col-md-3 pd-none encapsula-pdf-pag pull-right" >
+        <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/manual.png" title="manual" alt="manual">
+        <p class="titulo-interna-destaque titulo-cor-cinza mg-left-desc-prod">Manual (pdf)</p>
+        <div class="mtlsr-images-for-lightbox">
+            <ul class="pos-abs-manual">
+                <li>
+                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
+upload/manual/Acomplamentos_Linha_TM.pdf" target="_blank" >
+                        <h3 class="txt-interna mg-left-desc-prod">
+                           Especificações
+                        </h3>
+                    </a>
+                </li>
+            </ul>
+        </div> 
+        <div class="mtlsr-lightbox">
+            <a href="#" class="close">&#9421;</a>
+        </div>
+    </div> 
+    <div class="col-xs-12 col-sm-3 col-md-3 pd-none pull-right">
+        <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/categoria.png" title="categoria" alt="categoria">
+        <p class="titulo-interna-destaque titulo-cor-cinza mg-left-desc-prod">Categoria</p>
+        <p class="txt-interna mg-left-desc-prod">Acoplamentos</p>
+    </div>   
+</div>
+
+<div class="encapsula-conteudo-produto-pag">
+<!-- <div class="col-xs-12 col-sm-12 col-md-12 pd-none encapsula-txt-prod-pag"> -->
 	<img class="img-produto pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
 upload/produto/acoplamentos_3.jpg" alt="acoplamentos de grades elásticas METALFLEX tipo TM" title="acoplamentos de grades elásticas METALFLEX tipo TM">
 
@@ -48,7 +80,7 @@ upload/produto/acopla_sobrecarga.jpg" alt="Sobrecarga" title="Sobrecarga" width=
 	        </div>
 		</div>
 	</div>
-	<div class="col-xs-12 col-sm-12 col-md-12">
+	<!-- <div class="col-xs-12 col-sm-12 col-md-12">
 		<br>
 	    <div class="col-xs-12 col-sm-6 col-md-6 pd-none">
 	        <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
@@ -65,5 +97,5 @@ commom/img/manual.png" title="manual" alt="manual">
 	            <p class="titulo-interna-destaque titulo-cor-cinza mg-left-desc-prod">Manual (pdf)</p>
 	        </a>
 	    </div> 
-	</div>
+	</div> -->
 </div>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-26 12:11:25
+<?php /* Smarty version 2.6.12, created on 2015-11-27 11:57:26
          compiled from ../inc/breadcrumb.html */ ?>
 <div class="bloco-breadcrumb">
     <ul class="ul-breadcrumb">
@@ -15,9 +15,11 @@ noticias/<?php echo $this->_tpl_vars['url'][1]; ?>
 </a></li> -->
             <li class="linha-bread"><?php echo $this->_tpl_vars['url'][1]; ?>
 </li>
-        	<li class="seta-bread"> >> </li>
-        	<li class="linha-bread"><?php echo $this->_tpl_vars['url'][2]; ?>
+            <?php if (! is_numeric ( $this->_tpl_vars['url'][2] )): ?>
+            	<li class="seta-bread"> >> </li>
+            	<li class="linha-bread"><?php echo $this->_tpl_vars['url'][2]; ?>
 </li>
+            <?php endif; ?>
         <?php elseif ($this->_tpl_vars['url'][1]): ?>
         	<li class="seta-bread"> >> </li>
         	<li class="linha-bread"><a class="link-bread" href="<?php echo $this->_tpl_vars['URL'];  if ($this->_tpl_vars['url'][0] == 'noticia'): ?>noticias<?php elseif ($this->_tpl_vars['url'][0] == 'produto'): ?>produtos<?php else:  echo $this->_tpl_vars['url'][0];  endif; ?>"><?php if ($this->_tpl_vars['url'][0] == 'noticia'): ?> noticias <?php elseif ($this->_tpl_vars['url'][0] == 'produto'): ?>produtos <?php elseif ($this->_tpl_vars['url'][0] == "fale-conosco"): ?> Fale Conosco <?php else: ?> <?php echo $this->_tpl_vars['url'][0]; ?>

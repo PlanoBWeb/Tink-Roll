@@ -1,6 +1,38 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-26 11:55:23
+<?php /* Smarty version 2.6.12, created on 2015-11-27 11:17:45
          compiled from ../templates/acoplamentos_de_engrenagem.html */ ?>
-<div class="col-xs-12 col-sm-12 col-md-12 pd-none encapsula-txt-prod-pag">
+<h1 class="titulo-produto">Acoplamentos de engrenagem</h1>
+<h2 class="titulo-interna-destaque titulo-cor-cinza">LINHA GM</h2>
+<div class="col-xs-12 col-sm-12 col-md-12 pd-none">
+    <div class="col-xs-12 col-sm-3 col-md-3 pd-none encapsula-pdf-pag pull-right" >
+        <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/manual.png" title="manual" alt="manual">
+        <p class="titulo-interna-destaque titulo-cor-cinza mg-left-desc-prod">Manual (pdf)</p>
+        <div class="mtlsr-images-for-lightbox">
+            <ul class="pos-abs-manual">
+                <li>
+                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
+upload/manual/Acomplamentos_Linha_GM.pdf" target="_blank" >
+                        <h3 class="txt-interna mg-left-desc-prod">
+                           Especificações
+                        </h3>
+                    </a>
+                </li>
+            </ul>
+        </div> 
+        <div class="mtlsr-lightbox">
+            <a href="#" class="close">&#9421;</a>
+        </div>
+    </div> 
+    <div class="col-xs-12 col-sm-3 col-md-3 pd-none pull-right">
+        <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/categoria.png" title="categoria" alt="categoria">
+        <p class="titulo-interna-destaque titulo-cor-cinza mg-left-desc-prod">Categoria</p>
+        <p class="txt-interna mg-left-desc-prod">Acoplamentos</p>
+    </div>   
+</div>
+
+<div class="encapsula-conteudo-produto-pag">
+<!-- <div class="col-xs-12 col-sm-12 col-md-12 pd-none encapsula-txt-prod-pag"> -->
 	<img class="img-produto pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
 upload/produto/acoplamentos_2.jpg" alt="acoplamentos METALFLEX tipo GM " title="acoplamentos METALFLEX tipo GM ">
 
@@ -19,7 +51,7 @@ upload/produto/2_acopla_gm_pag.jpg" alt="Dentes Triplamente Abaulados" title="De
 	O abaulamento do topo, raiz e flanco dos dentes permite um engrenamento preciso e suave, acomodando desalinhamnetos angulares, axiais e paralelos nos eixos conectados.</p>
 	
 	<br>
-	<div class="col-xs-12 col-sm-12 col-md-12 pd-none">
+	<!-- <div class="col-xs-12 col-sm-12 col-md-12 pd-none">
 	    <div class="col-xs-12 col-sm-6 col-md-6 pd-none">
 	        <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/categoria.png" title="categoria" alt="categoria">
@@ -36,6 +68,6 @@ upload/manual/Acomplamentos_Linha_GM.pdf" target="_blank" class="txt-interna">
 	        	teste
 	        </a>
 	    </div> 
-	</div>
+	</div> -->
 
 </div>
