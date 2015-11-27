@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-23 17:57:24
+<?php /* Smarty version 2.6.12, created on 2015-11-26 17:55:48
          compiled from produtos.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -7,12 +7,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
-	<meta name="description" content="" />
+	<meta name="description" content="Empresa especialista em rolamentos e acessórios industriais." />
 	<link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon-tab.png" rel="icon">
 	<link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/estilo.css">
-	<title>Tink Roll</title>
+	<title>Tinkroll – Conheça nossos produtos!</title>
  	<!-- Bootstrap -->
     <link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/bootstrap.min.css" rel="stylesheet">
@@ -32,8 +32,8 @@ unset($_smarty_tpl_vars);
  ?>
         <div class="banner-interna hidden-xs">
             <img src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/banner-institucional.jpg" alt="banner institucional" title="banner institucional">
-            <h1 class="titulo-banner-interna">produtos</h1>
+commom/img/banner-institucional.jpg" alt="banner produtos" title="banner produtos">
+            <p class="titulo-banner-interna">produtos</p>
         </div>        
         <section class="conteudo">
             <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -50,7 +50,8 @@ unset($_smarty_tpl_vars);
  ?>
                 </div>
                 <div class="col-xs-12 col-sm-9 col-md-9">
-                    <h2 class="titulo-interna-destaque titulo-cor-cinza">&nbsp;&nbsp;Produtos</h2><br>
+                    <h1 class="titulo-interna-destaque titulo-cor-cinza">&nbsp;&nbsp;<?php echo $this->_tpl_vars['dados'][0]['tituloCat']; ?>
+</h1><br>
                     <?php if ($this->_tpl_vars['dados'] < 1): ?>
                         <center><p class="titulo-produto">Nenhum resultado encontrado</p> </center>
                     <?php else: ?>
@@ -87,15 +88,64 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
 " alt="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
 " title="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
 ">
-                                    <h2 class="titulo-produtos"><a href="<?php echo $this->_tpl_vars['URL']; ?>
-produto"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
+                                    <div class="titulo-and-sub-prod">
+                                        <h2 class="titulo-produtos"><a href="<?php echo $this->_tpl_vars['URL']; ?>
+produto/<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['urlAmigavel']; ?>
+/"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['titulo']; ?>
 </a></h2>
+                                        <h3 class="sub-titulo-produtos"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['subTitulo']; ?>
+</h3>
+                                    </div>
                                     <a class="saiba-mais" href="<?php echo $this->_tpl_vars['URL']; ?>
 produto/<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['urlAmigavel']; ?>
 /" title="saiba mais sobre esse produto">Saiba mais</a>
                                 </div>
                             </div>
                         <?php endfor; endif; ?> 
+                        <?php if ($this->_tpl_vars['totalPaginas'] > 1): ?>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="pull-right">
+                                        <?php unset($this->_sections['i']);
+$this->_sections['i']['start'] = (int)1;
+$this->_sections['i']['name'] = 'i';
+$this->_sections['i']['loop'] = is_array($_loop=$this->_tpl_vars['Numpaginas']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$this->_sections['i']['show'] = true;
+$this->_sections['i']['max'] = $this->_sections['i']['loop'];
+$this->_sections['i']['step'] = 1;
+if ($this->_sections['i']['start'] < 0)
+    $this->_sections['i']['start'] = max($this->_sections['i']['step'] > 0 ? 0 : -1, $this->_sections['i']['loop'] + $this->_sections['i']['start']);
+else
+    $this->_sections['i']['start'] = min($this->_sections['i']['start'], $this->_sections['i']['step'] > 0 ? $this->_sections['i']['loop'] : $this->_sections['i']['loop']-1);
+if ($this->_sections['i']['show']) {
+    $this->_sections['i']['total'] = min(ceil(($this->_sections['i']['step'] > 0 ? $this->_sections['i']['loop'] - $this->_sections['i']['start'] : $this->_sections['i']['start']+1)/abs($this->_sections['i']['step'])), $this->_sections['i']['max']);
+    if ($this->_sections['i']['total'] == 0)
+        $this->_sections['i']['show'] = false;
+} else
+    $this->_sections['i']['total'] = 0;
+if ($this->_sections['i']['show']):
+
+            for ($this->_sections['i']['index'] = $this->_sections['i']['start'], $this->_sections['i']['iteration'] = 1;
+                 $this->_sections['i']['iteration'] <= $this->_sections['i']['total'];
+                 $this->_sections['i']['index'] += $this->_sections['i']['step'], $this->_sections['i']['iteration']++):
+$this->_sections['i']['rownum'] = $this->_sections['i']['iteration'];
+$this->_sections['i']['index_prev'] = $this->_sections['i']['index'] - $this->_sections['i']['step'];
+$this->_sections['i']['index_next'] = $this->_sections['i']['index'] + $this->_sections['i']['step'];
+$this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
+$this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
+?>
+                                            <a  class="txt-interna" href="<?php echo $this->_tpl_vars['URL']; ?>
+produtos/<?php if ($this->_tpl_vars['url'][1]):  echo $this->_tpl_vars['url'][1]; ?>
+/<?php endif;  echo $this->_tpl_vars['Numpaginas'][$this->_sections['i']['index']]; ?>
+">
+                                                <?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['i']['index']]; ?>
+
+                                            </a>
+                                        <?php endfor; endif; ?>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endif; ?>
                     <?php endif; ?>
                 </div>
             </article>    

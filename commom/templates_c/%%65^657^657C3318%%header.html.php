@@ -1,5 +1,10 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-25 17:57:50
+<?php /* Smarty version 2.6.12, created on 2015-11-26 13:34:57
          compiled from ../inc/header.html */ ?>
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "../inc/analyticstracking.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
 <header>
     <div class="encapsula-topo">
         <div class="col-xs-9 col-sm-5 col-md-5">
@@ -81,7 +86,7 @@ commom/img/lupa.png" alt="buscar"></button>
         </div>
         <div class="tel-mobile visible-xs-block"> 
             <p class="encapsula-txt-tel">
-                <a class="txt-tel-topo" href="tel:01134290600">(11) 3429-0600</a><br>
+                <a class="txt-tel-topo" href="tel:01134290600">(11) 3429-0600</a>
                 <a class="txt-tel-topo" href="tel:01129461300">2946-1300</a>
             </p>
             <a class="txt-medio-default" href="mailto:tinkroll@tinkroll.com.br">tinkroll@tinkroll.com.br</a>                

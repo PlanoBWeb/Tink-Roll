@@ -5,10 +5,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
-	<meta name="description" content="" />
+	<meta name="description" content="Empresa especialista em rolamentos e acessórios industriais." />
 	<link href="{$URL}commom/img/icon-tab.png" rel="icon">
 	<link rel="stylesheet" type="text/css" href="{$URL}commom/css/estilo.css">
-	<title>Tink Roll</title>
+	<title>Tinkroll – Conheça nossos produtos!</title>
  	<!-- Bootstrap -->
     <link href="{$URL}commom/css/bootstrap.min.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -22,8 +22,8 @@
     <div class="container-fluid">
         {include file="../inc/header.html"}
         <div class="banner-interna hidden-xs">
-            <img src="{$URL}commom/img/banner-institucional.jpg" alt="banner institucional" title="banner institucional">
-            <h1 class="titulo-banner-interna">produtos</h1>
+            <img src="{$URL}commom/img/banner-institucional.jpg" alt="banner produtos" title="banner produtos">
+            <p class="titulo-banner-interna">produtos</p>
         </div>        
         <section class="conteudo">
             {include file="../inc/breadcrumb.html"}
@@ -32,7 +32,7 @@
                     {include file="../inc/menu-lateral.html"}
                 </div>
                 <div class="col-xs-12 col-sm-9 col-md-9">
-                    <h2 class="titulo-interna-destaque titulo-cor-cinza">&nbsp;&nbsp;Produtos</h2><br>
+                    <h1 class="titulo-interna-destaque titulo-cor-cinza">&nbsp;&nbsp;{$dados[0].tituloCat}</h1><br>
                     {if $dados < 1}
                         <center><p class="titulo-produto">Nenhum resultado encontrado</p> </center>
                     {else}
@@ -43,11 +43,27 @@
                                         <div class="produto-especial"></div>
                                     {/if}
                                     <img src="{$URL}{$dados[i].caminhoThumb}" alt="{$dados[i].titulo}" title="{$dados[i].titulo}">
-                                    <h2 class="titulo-produtos"><a href="{$URL}produto">{$dados[i].titulo}</a></h2>
+                                    <div class="titulo-and-sub-prod">
+                                        <h2 class="titulo-produtos"><a href="{$URL}produto/{$dados[i].urlAmigavel}/">{$dados[i].titulo}</a></h2>
+                                        <h3 class="sub-titulo-produtos">{$dados[i].subTitulo}</h3>
+                                    </div>
                                     <a class="saiba-mais" href="{$URL}produto/{$dados[i].urlAmigavel}/" title="saiba mais sobre esse produto">Saiba mais</a>
                                 </div>
                             </div>
                         {/section} 
+                        {if $totalPaginas > 1}
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="pull-right">
+                                        {section start=1 name=i loop=$Numpaginas}
+                                            <a  class="txt-interna" href="{$URL}produtos/{if $url[1]}{$url[1]}/{/if}{$Numpaginas[i]}">
+                                                {$Numpaginas[i]}
+                                            </a>
+                                        {/section}
+                                    </div>
+                                </div>
+                            </div>
+                        {/if}
                     {/if}
                 </div>
             </article>    

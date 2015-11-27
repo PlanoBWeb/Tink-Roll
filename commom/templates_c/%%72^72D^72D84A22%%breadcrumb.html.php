@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-25 17:47:25
+<?php /* Smarty version 2.6.12, created on 2015-11-26 12:11:25
          compiled from ../inc/breadcrumb.html */ ?>
 <div class="bloco-breadcrumb">
     <ul class="ul-breadcrumb">
@@ -26,7 +26,7 @@ noticias/<?php echo $this->_tpl_vars['url'][1]; ?>
         	<li class="linha-bread"><?php if ($this->_tpl_vars['url'][0] == 'produto'):  echo $this->_tpl_vars['dados'][0]['titulo'];  elseif ($this->_tpl_vars['url'][0] == 'produtos'):  echo $this->_tpl_vars['dados'][0]['tituloCat'];  elseif ($this->_tpl_vars['url'][0] == 'noticia'):  echo $this->_tpl_vars['dados'][0]['titulo'];  else:  echo $this->_tpl_vars['url'][1];  endif; ?></li>            
         <?php else: ?>
 			<li class="seta-bread"> >> </li>
-        	<li class="linha-bread"><?php if ($this->_tpl_vars['pagina'] == "fale-conosco"): ?> Fale Conosco <?php elseif ($this->_tpl_vars['pagina'] == 'manutencao'): ?> Manutenção <?php else: ?> <?php echo $this->_tpl_vars['pagina']; ?>
+        	<li class="linha-bread"><?php if ($this->_tpl_vars['pagina'] == "fale-conosco"): ?> Fale Conosco <?php elseif ($this->_tpl_vars['pagina'] == 'manutencao'): ?> Manutenção <?php elseif ($this->_tpl_vars['pagina'] == 'localizacao'): ?>Localização<?php else: ?> <?php echo $this->_tpl_vars['pagina']; ?>
  <?php endif; ?></li>        
         <?php endif; ?>
     </ul>

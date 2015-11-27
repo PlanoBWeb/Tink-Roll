@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-24 12:45:52
+<?php /* Smarty version 2.6.12, created on 2015-11-26 12:40:10
          compiled from ../templates/rolamentos_de_precisao.html */ ?>
 <div class="col-xs-12 col-sm-12 col-md-12 pd-none encapsula-txt-prod-pag">
 
@@ -9,7 +9,7 @@ upload/produto/Rolamentos_de_Precisao_1.jpg" alt="Rolamentos de Precisão" title
 
 	<p class="txt-interna">A Tink Roll é distribuidor dos rolamentos de precisão das principais marcas do mercado e possui grande estoque de produtos. Possuímos rolamentos para centros de usinagem, retífica, fresa e tornos CNC. </p>
 
-	<p class="txt-interna">Disponibilizamos abaixo o catálogo para download das principais marcas oferecidas:</p>
+	<p class="txt-interna">Disponibilizamos abaixo o catálogo para download das principais marcas oferecidas:</p><br><br><br>
 
 	<div class="col-xs-12 col-sm-4 col-md-4">
 		<br>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-25 17:04:49
+<?php /* Smarty version 2.6.12, created on 2015-11-26 16:35:11
          compiled from manutencao.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -7,12 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="" />
+    <meta name="description" content="Empresa especialista em Manutenção de Fusos de Esferas." />
     <link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon-tab.png" rel="icon">
     <link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/estilo.css">
-    <title>Tink Roll</title>
+    <title>Tinkroll - Manutenção de Fusos de Esferas.</title>
     <!-- Bootstrap -->
     <link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@ unset($_smarty_tpl_vars);
         <div class="banner-interna hidden-xs">
             <img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/banner-institucional.jpg" alt="banner Manutenção" title="banner Manutenção">
-            <h1 class="titulo-banner-interna">Manutenção</h1>
+            <h3 class="titulo-banner-interna">Manutenção</h3>
         </div>        
         <section class="conteudo">
             <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -43,24 +43,24 @@ unset($_smarty_tpl_vars);
  ?>
             <article class="bloco-conteudo">
                 <div class="col-xs-12 col-sm-11 col-md-11">
-                    <h2 class="titulo-interna mg-top-none">Manutenção de Fusos de Esferas</h2>
+                    <h1 class="titulo-interna mg-top-none">Manutenção de Fusos de Esferas</h1>
                     <p class="txt-interna">A Tink Roll é especializada no ramo de manutenção de Fusos de Esferas. Trabalhamos com as principais marcas do mercado, mantendo um amplo estoque e facilidades para atender com rapidez e eficiência. </p>
                     <div class="row">
                         <div class="col-xs-6 col-sm-3 col-md-3">
                             <img src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/produto/manutencao_1.jpg" alt="Manutenção" title="Manutenção">
+upload/produto/manutencao_1.jpg" alt="Fusos de Esferas Laminado (Precisão C6 - C10)" title="Fusos de Esferas Laminado (Precisão C6 - C10)">
                         </div>
                         <div class="col-xs-6 col-sm-3 col-md-3">
                             <img src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/produto/manutencao_2.jpg" alt="Manutenção" title="Manutenção">
+upload/produto/manutencao_2.jpg" alt="Fusos de Esferas de Precisão (Precisão C0 - C7)" title="Fusos de Esferas de Precisão (Precisão C0 - C7)">
                         </div>
                         <div class="col-xs-6 col-sm-3 col-md-3">
                             <img src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/produto/manutencao_3.jpg" alt="Manutenção" title="Manutenção">
+upload/produto/manutencao_3.jpg" alt="Fusos de Esferas c/ Tanque Auto-Lubrificante E2 (Op.)" title="Fusos de Esferas c/ Tanque Auto-Lubrificante E2 (Op.)">
                         </div>
                         <div class="col-xs-6 col-sm-3 col-md-3">
                             <img src="<?php echo $this->_tpl_vars['URL']; ?>
-upload/produto/manutencao_4.jpg" alt="Manutenção" title="Manutenção">
+upload/produto/manutencao_4.jpg" alt="Fusos de Esferas Refrigerados  Cool Type" title="Fusos de Esferas Refrigerados  Cool Type">
                         </div>
                     </div>
                     <p class="txt-interna"><br>A Azetek possui um departamento especializado e altamente capacitado na recuperação de fusos de esferas de diversos fabricantes. Um fuso pode ser recuperado de 3 a 5 vezes dependendo de diversos fatores. Se comprado com a compra de um novo item a empresa pode gerar uma economia de até 70%.</p>  

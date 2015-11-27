@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="robots" content="index, follow">
+	<meta name="robots" content="noindex, nofollow">
 	<meta name="description" content="" />
 	<link href="{$URL}commom/img/icon-tab.png" rel="icon">
 	<link rel="stylesheet" type="text/css" href="{$URL}commom/css/estilo.css">
@@ -19,18 +19,25 @@
     <![endif]-->
   </head>
   <body>
+    {literal}
+   
+    {/literal}
+
     <div class="container-fluid">
         {include file="../inc/header.html"}
         <div class="banner-interna hidden-xs">
             <img src="{$URL}commom/img/banner-institucional.jpg" alt="banner institucional" title="banner institucional">
-            <h1 class="titulo-banner-interna">404 - Not Found</h1>
+            <h1 class="titulo-banner-interna">Newsletter</h1>
         </div>        
         <section class="conteudo">
             {include file="../inc/breadcrumb.html"}
             <article class="bloco-conteudo">
+                <div class="col-xs-12 col-sm-5 col-md-5">
+                    <img src="{$URL}commom/img/fale-conosco.jpg" alt="fale conosco" title="fale conosco">
+                </div>
                 <div class="col-xs-12 col-sm-7 col-md-7">
-                    <h2 class="titulo-sobre">404 - Página não existe!</h2>
-
+                    <h2 class="titulo-interna-destaque titulo-cor-cinza">Newsletter</h2>
+                    <p class="txt-interna">Obrigado, em breve você rebera nossa newsletter!</p><br>
                 </div>
             </article>    
         </section>

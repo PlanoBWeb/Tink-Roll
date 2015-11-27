@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-25 13:27:05
+<?php /* Smarty version 2.6.12, created on 2015-11-26 12:38:49
          compiled from ../inc/menu-lateral.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', '../inc/menu-lateral.html', 20, false),)), $this); ?>
@@ -53,7 +53,7 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
 ?>   
 			<!-- <li class="linha-menu-lateral"><a class="link-menu-lateral link-menu-lateral-ativo-p" href="<?php echo $this->_tpl_vars['URL']; ?>
 "></a></li> -->
-			<li class="linha-menu-lateral"><a class="link-menu-lateral <?php if ($this->_tpl_vars['url'][1] == $this->_tpl_vars['dadosCategoria'][$this->_sections['i']['index']]['urlAmigavel']): ?> link-menu-lateral-ativo <?php endif; ?>" href="<?php echo $this->_tpl_vars['URL']; ?>
+			<li class="linha-menu-lateral"><a class="link-menu-lateral <?php if ($this->_tpl_vars['url'][1] == $this->_tpl_vars['dadosCategoria'][$this->_sections['i']['index']]['urlAmigavel'] || $this->_tpl_vars['dados'][0]['tituloCat'] == $this->_tpl_vars['dadosCategoria'][$this->_sections['i']['index']]['titulo']): ?> link-menu-lateral-ativo <?php endif; ?>" href="<?php echo $this->_tpl_vars['URL']; ?>
 produtos/<?php echo $this->_tpl_vars['dadosCategoria'][$this->_sections['i']['index']]['urlAmigavel']; ?>
 "><?php echo $this->_tpl_vars['dadosCategoria'][$this->_sections['i']['index']]['titulo']; ?>
 </a></li>

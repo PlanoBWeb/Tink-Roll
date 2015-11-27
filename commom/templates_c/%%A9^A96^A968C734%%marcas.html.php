@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-10 12:55:22
+<?php /* Smarty version 2.6.12, created on 2015-11-26 13:42:59
          compiled from marcas.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -7,12 +7,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
-	<meta name="description" content="" />
+	<meta name="description" content="Empresa fornecedora de produtos de diversas marcas" />
 	<link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon-tab.png" rel="icon">
 	<link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/estilo.css">
-	<title>Tink Roll</title>
+	<title>Tinkroll – fornecedora de diversas marcas</title>
  	<!-- Bootstrap -->
     <link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/bootstrap.min.css" rel="stylesheet">
@@ -32,8 +32,8 @@ unset($_smarty_tpl_vars);
  ?>
         <div class="banner-interna hidden-xs">
             <img src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/banner-institucional.jpg" alt="banner institucional" title="banner institucional">
-            <h1 class="titulo-banner-interna">marcas</h1>
+commom/img/banner-institucional.jpg" alt="banner marcas" title="banner marcas">
+            <h3 class="titulo-banner-interna">marcas</h3>
         </div>        
         <section class="conteudo">
             <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -50,7 +50,7 @@ unset($_smarty_tpl_vars);
  ?>
                 </div>
                 <div class="col-xs-12 col-sm-9 col-md-9">
-                    <h2 class="titulo-interna-destaque titulo-cor-cinza">&nbsp;&nbsp;Marcas</h2><br>
+                    <h1 class="titulo-interna-destaque titulo-cor-cinza">&nbsp;&nbsp;Marcas que a Tink Roll trabalha</h1><br>
                     <a href="<?php echo $this->_tpl_vars['URL']; ?>
 marcas/bgl"><img class="img-marcas" src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/bgl.jpg" alt="bgl" title="bgl"></a>

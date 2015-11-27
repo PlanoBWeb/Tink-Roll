@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-10 16:30:01
+<?php /* Smarty version 2.6.12, created on 2015-11-26 12:57:12
          compiled from fale-conosco.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -7,12 +7,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
-	<meta name="description" content="" />
+	<meta name="description" content="Entre em contato com a Tinkroll." />
 	<link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon-tab.png" rel="icon">
 	<link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/estilo.css">
-	<title>Tink Roll</title>
+	<title>Tinkroll – Entre em contato conosco</title>
  	<!-- Bootstrap -->
     <link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/bootstrap.min.css" rel="stylesheet">
@@ -32,7 +32,7 @@ unset($_smarty_tpl_vars);
  ?>
         <div class="banner-interna hidden-xs">
             <img src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/banner-institucional.jpg" alt="banner institucional" title="banner institucional">
+commom/img/banner-institucional.jpg" alt="banner Fale Conosco" title="banner Fale Conosco">
             <h1 class="titulo-banner-interna">Fale Conosco</h1>
         </div>        
         <section class="conteudo">

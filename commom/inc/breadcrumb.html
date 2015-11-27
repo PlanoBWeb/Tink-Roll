@@ -16,7 +16,7 @@
         	<li class="linha-bread">{if $url[0] == "produto"}{$dados[0].titulo}{elseif $url[0] == "produtos"}{$dados[0].tituloCat}{elseif $url[0] == "noticia"}{$dados[0].titulo}{else}{$url[1]}{/if}</li>            
         {else}
 			<li class="seta-bread"> >> </li>
-        	<li class="linha-bread">{if $pagina == "fale-conosco"} Fale Conosco {elseif $pagina == "manutencao"} Manutenção {else} {$pagina} {/if}</li>        
+        	<li class="linha-bread">{if $pagina == "fale-conosco"} Fale Conosco {elseif $pagina == "manutencao"} Manutenção {elseif $pagina == "localizacao"}Localização{else} {$pagina} {/if}</li>        
         {/if}
     </ul>
 </div>

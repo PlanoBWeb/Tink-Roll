@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-25 15:57:56
+<?php /* Smarty version 2.6.12, created on 2015-11-26 18:38:28
          compiled from produto.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -7,12 +7,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
-	<meta name="description" content="" />
+	<meta name="description" content="Empresa especializada em  <?php echo $this->_tpl_vars['dados'][0]['titulo']; ?>
+" />
 	<link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon-tab.png" rel="icon">
 	<link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/estilo.css">
-	<title>Tink Roll</title>
+	<title>Tinkroll – <?php echo $this->_tpl_vars['dados'][0]['titulo']; ?>
+</title>
  	<!-- Bootstrap -->
     <link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/bootstrap.min.css" rel="stylesheet">
@@ -32,8 +34,8 @@ unset($_smarty_tpl_vars);
  ?>
         <div class="banner-interna hidden-xs">
             <img src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/banner-institucional.jpg" alt="banner institucional" title="banner institucional">
-            <h1 class="titulo-banner-interna">produtos</h1>
+commom/img/banner-institucional.jpg" alt="banner produtos" title="banner produtos">
+            <h3 class="titulo-banner-interna">produtos</h3>
         </div>        
         <section class="conteudo">
             <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -77,15 +79,18 @@ unset($_smarty_tpl_vars);
                                         <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/categoria.png" title="categoria" alt="categoria">
                                         <p class="titulo-interna-destaque titulo-cor-cinza mg-left-desc-prod">Categoria</p>
-                                        <p class="txt-interna mg-left-desc-prod"><?php echo $this->_tpl_vars['dados'][0]['tituloCat']; ?>
-</p>
+                                        <h3 class="txt-interna mg-left-desc-prod"><?php echo $this->_tpl_vars['dados'][0]['tituloCat']; ?>
+</h3>
                                     </div>   
                                     <?php if ($this->_tpl_vars['dados'][0]['caminhoPdf']): ?>
                                         <div class="col-xs-12 col-sm-6 col-md-6 pd-none encapsula-pdf-pag" >
                                             <img class="pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/manual.png" title="manual" alt="manual">
                                             <p class="titulo-interna-destaque titulo-cor-cinza mg-left-desc-prod">Manual (pdf)</p>
-                                            <?php unset($this->_sections['i']);
+                                            <div class="mtlsr-images-for-lightbox">
+                                                <ul>
+                                                    <li>
+                                                        <?php unset($this->_sections['i']);
 $this->_sections['i']['name'] = 'i';
 $this->_sections['i']['loop'] = is_array($_loop=$this->_tpl_vars['dados']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
 $this->_sections['i']['show'] = true;
@@ -109,12 +114,20 @@ $this->_sections['i']['index_next'] = $this->_sections['i']['index'] + $this->_s
 $this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
 $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
 ?>   
-                                                <a href="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoPdf']; ?>
-" target="_blank" class="txt-interna mg-left-desc-prod">
-                                                    <?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['tituloPdf']; ?>
+                                                            <a href="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoPdf']; ?>
+" target="_blank" >
+                                                                <h3 class="txt-interna mg-left-desc-prod">
+                                                                    <?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['tituloPdf']; ?>
 
-                                                </a><br>
-                                            <?php endfor; endif; ?> 
+                                                                </h3>
+                                                            </a>
+                                                        <?php endfor; endif; ?> 
+                                                    </li>
+                                                </ul>
+                                            </div> 
+                                            <div class="mtlsr-lightbox">
+                                                <a href="#" class="close">&#9421;</a>
+                                            </div>
                                         </div> 
                                     <?php endif; ?>
                                 </div>
@@ -122,7 +135,7 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                         <?php endif; ?>
                     </div>
                     <div class="row bloco-form-produto">
-                        <h1 class="solicite mg-top-none">Solicite um orçamento!</h1><br>
+                        <p class="solicite mg-top-none">Solicite um orçamento!</p><br>
                         <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "../inc/form.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;

@@ -1,7 +1,9 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-25 17:47:25
+<?php /* Smarty version 2.6.12, created on 2015-11-26 13:38:32
          compiled from ../inc/form.html */ ?>
 <form method="post" action="<?php echo $this->_tpl_vars['URL']; ?>
 envia" name="contato">
+    <input type="hidden" name="pag" value="<?php echo $this->_tpl_vars['pagina']; ?>
+">
     <div class="form-group">
         <input type="text" name="nome" class="form-control" placeholder="Nome*">
     </div>
@@ -22,7 +24,6 @@ envia" name="contato">
             <div class="form-group pull-right">
                 <label class="label-form" for="onde">Onde nos achou?</label>
                 <select class="form-control" name="onde" id="onde">
-                    <option>Selecione</option>
                     <option value="Google">Google</option>
                     <option value="Indicação">Indicação</option>
                     <option value="Email Mkt">Email Mkt</option>

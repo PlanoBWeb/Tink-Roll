@@ -15,13 +15,6 @@
 		exit();
 	}
 
-	// if ($url[1]) {
-	// 	$parametro['produtosCat'] 	= $url[1];	
-	// }elseif ($_POST['search']) {
-	// 	$parametro['busca'] 		= $_POST['search'];	
-	// }else{
-	// 	$parametro['prodHiwin'] 		= "1";	
-	// }
 	if ($_POST['search'] || $_POST['searchMobile']) {
 		if ($_POST['searchMobile']) {
 			$parametro['busca'] 		= $_POST['searchMobile'];	
@@ -33,7 +26,29 @@
 	}else{
 		$parametro['prodHiwin'] 		= "1";	
 	}
-	$retorno 					= $class->Pesquisar($parametro, null, null);
+
+	//  Paginação
+	$retornoPag = $class->Pesquisar($parametro, null, null);
+	if( $retornoPag[0] )
+		die("<script>alert('".$retornoPag[1]."');location.href='home';</script>");
+
+	$totalPorPagina = 9;
+	$totalDeProdutos = count($retornoPag[1]);
+	$conta = $totalDeProdutos / $totalPorPagina;
+	$totalPaginas = ceil($conta);
+
+	if (!(intval($url[1]) || intval($url[2]))) {
+		$paginacao = 1;
+	}else{
+		if (intval($url[2])) {
+			$paginacao = $url[2];
+		}else{
+			$paginacao = $url[1];	
+		}
+	}
+	//  Fim Paginação
+
+	$retorno 					= $class->Pesquisar($parametro, $totalPorPagina, $paginacao);
 	if( $retorno[0] )
 	{
 		$smarty->assign("mensagem", $retorno[1]);
@@ -56,6 +71,13 @@
 	}	
 	// Busca ajax
 
+	$Numpaginas = array();
+	for($j=0; $j <= $totalPaginas; $j++) { 
+		$Numpaginas[$j] = $j;
+	}
+
+	$smarty->assign("totalPaginas", $totalPaginas);
+	$smarty->assign("Numpaginas", $Numpaginas);
 	$smarty->assign("dadosCategoria", $retornoCategoria[1]);
 	$smarty->assign("dados", $retorno[1]);
 	$smarty->assign("url", $url);

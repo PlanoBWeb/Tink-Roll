@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-25 17:49:18
+<?php /* Smarty version 2.6.12, created on 2015-11-26 12:30:27
          compiled from index.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -7,12 +7,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
-	<meta name="description" content="" />
+	<meta name="description" content="Empresa especialista em rolamentos e acessórios industriais." />
 	<link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon-tab.png" rel="icon">
 	<link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/estilo.css">
-	<title>Tink Roll</title>
+	<title>Title Tinkroll - Rolamentos e Acessórios industriais.</title>
  	<!-- Bootstrap -->
     <link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/bootstrap.min.css" rel="stylesheet">
@@ -30,6 +30,7 @@ commom/css/vitrine/owl.theme.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/vitrine/owl.transitions.css">
     <!-- vitrine -->
+    <meta name="google-site-verification" content="EwRCJtTla3gsjdYtyrcQagRE87q4xHHM1_r6QYf9swM" />
   </head>
   <body>
     <div class="container-fluid">
@@ -52,8 +53,8 @@ unset($_smarty_tpl_vars);
                                     <img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/banner.jpg" alt="banner" title="banner">
                                 </div>
-                                <div class="item"><img src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/banner.jpg" alt="banner" title="banner"></div>
+                                <!-- <div class="item"><img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/banner.jpg" alt="banner" title="banner"></div> -->
                             </div>
                         </div>
                     </div>

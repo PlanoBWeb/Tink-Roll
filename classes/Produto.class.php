@@ -378,7 +378,7 @@ class Produto
 
 		if($post['busca'])
 		{
-			$query .= " AND P.titulo LIKE '%".$post['busca']."%' ";
+			$query .= " AND P.titulo LIKE '%".utf8_decode($post['busca'])."%' ";
 		}
 
 		if($post['destaque'])
@@ -424,6 +424,7 @@ class Produto
 			$dados[$i]['tituloProduto'] 	= utf8_encode($rows['tituloProduto']);
 			$dados[$i]['titulo']		 	= utf8_encode($rows['titulo']);
 			$dados[$i]['tituloPdf']		 	= utf8_encode($rows['tituloPdf']);
+			$dados[$i]['tituloCat']		 	= utf8_encode($rows['tituloCat']);
 			$dados[$i]['subTitulo']		 	= utf8_encode($rows['subTitulo']);
 			$dados[$i]['descricao']		 	= nl2br(utf8_encode($rows['descricao']));
 			$i++;

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-10 15:52:23
+<?php /* Smarty version 2.6.12, created on 2015-11-26 13:48:17
          compiled from noticias.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -7,12 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="" />
+    <meta name="description" content="Notícias de rolamentos e acessórios industriais Hiwin e diversas marcas." />
     <link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon-tab.png" rel="icon">
     <link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/estilo.css">
-    <title>Tink Roll</title>
+    <title>Tinkroll – Notícias rolamentos e acessórios industriais.</title>
     <!-- Bootstrap -->
     <link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/bootstrap.min.css" rel="stylesheet">
@@ -32,8 +32,8 @@ unset($_smarty_tpl_vars);
  ?>
         <div class="banner-interna hidden-xs">
             <img src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/banner-institucional.jpg" alt="banner institucional" title="banner institucional">
-            <h2 class="titulo-banner-interna">Noticias</h2>
+commom/img/banner-institucional.jpg" alt="banner Noticias" title="banner Noticias">
+            <h3 class="titulo-banner-interna">Noticias</h3>
         </div>        
         <section class="conteudo">
             <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -50,7 +50,7 @@ unset($_smarty_tpl_vars);
  ?>
                 </div>
                 <div class="col-xs-12 col-sm-9 col-md-9">
-                    <h1 class="titulo-interna-destaque titulo-cor-cinza">&nbsp;&nbsp;Noticias</h1><br>
+                    <h1 class="titulo-interna-destaque titulo-cor-cinza">&nbsp;&nbsp;Noticias Tink Roll</h1><br>
 
                     <?php unset($this->_sections['i']);
 $this->_sections['i']['name'] = 'i';

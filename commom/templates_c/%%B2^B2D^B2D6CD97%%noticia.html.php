@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-09 17:46:26
+<?php /* Smarty version 2.6.12, created on 2015-11-26 12:58:58
          compiled from noticia.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -7,12 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="" />
+    <meta name="description" content="<?php echo $this->_tpl_vars['dados'][0]['titulo']; ?>
+" />
     <link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon-tab.png" rel="icon">
     <link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/estilo.css">
-    <title>Tink Roll</title>
+    <title>Tinkroll – <?php echo $this->_tpl_vars['dados'][0]['titulo']; ?>
+</title>
     <!-- Bootstrap -->
     <link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/bootstrap.min.css" rel="stylesheet">

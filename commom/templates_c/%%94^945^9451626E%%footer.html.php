@@ -1,8 +1,8 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-25 18:01:33
+<?php /* Smarty version 2.6.12, created on 2015-11-27 10:14:34
          compiled from ../inc/footer.html */ ?>
 <footer>
     <article class="bloco-footer">
-        <div class="col-xs-12 col-sm-4 col-md-4 bloco-conteudo-footer">
+        <div class="col-xs-12 col-sm-4 col-md-4 bloco-conteudo-footer hidden-xs">
             <a href="<?php echo $this->_tpl_vars['URL']; ?>
 home" class="logo-footer" alt="Tink Roll"><img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/logo.png" alt="Tink Roll" title="Tink Roll"></a>
@@ -35,15 +35,15 @@ fale-conosco" class="link-menu-rodape">Contato</a></li>
             </ul>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-4 bloco-conteudo-footer">
-            <h3 class="titulo-sobre"><img src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/icon-msg.png" class="icone-rodape" alt="contato" title="contato">contato</h3>
+            <p class="titulo-sobre"><img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon-msg.png" class="icone-rodape" alt="contato" title="contato">contato</p>
             <div class="encapsula-txt-contato">
                 <a href="tel:01134290600" class="link-contato-footer">(11) 3429-0600</a>
                 <a href="tel:01129461300" class="link-contato-footer">/ 2946-1300 </a><br>
                 <a href="mailto:tinkroll@tinkroll.com.br" class="link-contato-footer">tinkroll@tinkroll.com.br</a>
             </div>
-            <h3 class="titulo-sobre"><img src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/icon-local.png" class="icone-rodape" alt="LOcalização" title="LOcalização">LOcalização</h3>
+            <p class="titulo-sobre"><img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon-local.png" class="icone-rodape" alt="LOcalização" title="LOcalização">LOcalização</p>
             <div class="encapsula-txt-contato">
                 <p class="link-contato-footer">Rua Bertolina Maria, 54</p>
                 <p class="link-contato-footer">Vila Vermelha - São Paulo</p>
@@ -51,8 +51,8 @@ commom/img/icon-local.png" class="icone-rodape" alt="LOcalização" title="LOcal
             </div>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-4 bloco-conteudo-footer">
-            <h3 class="titulo-sobre"><img src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/icon-aceita.png" class="icone-rodape" alt="Aceitamos todos os cartões de crédito" title="Aceitamos todos os cartões de crédito">Aceitamos todos os cartões de crédito</h3>
+            <p class="titulo-sobre"><img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon-aceita.png" class="icone-rodape" alt="Aceitamos todos os cartões de crédito" title="Aceitamos todos os cartões de crédito">Aceitamos todos os cartões de crédito</p>
             <img class="cartoes" src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/cartoes.png" alt="Aceitamos todos os cartões de crédito" title="Aceitamos todos os cartões de crédito">
         </div>
@@ -82,6 +82,8 @@ commom/js/funcoes.js"></script>
 <!-- vitrine -->
 <script src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/js/vitrine/owl.carousel.js"></script>
+<script src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/js/lightbox.js"></script>
 <!-- vitrine -->
 <?php echo '
     <script>
@@ -266,7 +268,7 @@ commom/js/vitrine/owl.carousel.js"></script>
 
                 $.ajax({
                 type: "POST",
-                url: "produtos/",
+                url: "http://tinkroll.com.br/Homologacao/produtos/",
                 // data:\'busca=\'+$(this).val(),
                 data: {search: valorBusca, buscaAjax: "buscaAjax"},
           
@@ -303,7 +305,7 @@ commom/js/vitrine/owl.carousel.js"></script>
 
                 $.ajax({
                 type: "POST",
-                url: "produtos/",
+                url: "http://tinkroll.com.br/Homologacao/produtos/",
                 // data:\'busca=\'+$(this).val(),
                 data: {search: valorBusca, buscaAjax: "buscaAjax"},
           

@@ -68,7 +68,7 @@
 			$headers 	.= "Reply-To: $email\n";
 			$envio 		= mail("tinkroll@tinkroll.com.br", $assunto,$conteudo,$headers);
 
-			echo utf8_decode("<script>alert('Cadastro enviado com sucesso.');location.href ='home'</script>");
+			echo utf8_decode("<script>location.href ='obrigado-news'</script>");
 		}
 
 	}

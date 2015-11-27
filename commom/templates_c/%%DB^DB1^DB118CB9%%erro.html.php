@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-11 14:15:06
+<?php /* Smarty version 2.6.12, created on 2015-11-26 12:56:24
          compiled from erro.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -33,7 +33,7 @@ unset($_smarty_tpl_vars);
         <div class="banner-interna hidden-xs">
             <img src="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/banner-institucional.jpg" alt="banner institucional" title="banner institucional">
-            <h1 class="titulo-banner-interna">Institucional</h1>
+            <h1 class="titulo-banner-interna">404 - Not Found</h1>
         </div>        
         <section class="conteudo">
             <?php $_smarty_tpl_vars = $this->_tpl_vars;

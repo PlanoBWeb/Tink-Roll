@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-10 16:30:16
+<?php /* Smarty version 2.6.12, created on 2015-11-26 13:42:57
          compiled from institucional.html */ ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -7,12 +7,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
-	<meta name="description" content="" />
+	<meta name="description" content="Description – Empresa especialista em rolamentos e acessórios industriais." />
 	<link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/img/icon-tab.png" rel="icon">
 	<link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/estilo.css">
-	<title>Tink Roll</title>
+	<title>Title Tinkroll – Quem Somos</title>
  	<!-- Bootstrap -->
     <link href="<?php echo $this->_tpl_vars['URL']; ?>
 commom/css/bootstrap.min.css" rel="stylesheet">
@@ -32,8 +32,8 @@ unset($_smarty_tpl_vars);
  ?>
         <div class="banner-interna hidden-xs">
             <img src="<?php echo $this->_tpl_vars['URL']; ?>
-commom/img/banner-institucional.jpg" alt="banner institucional" title="banner institucional">
-            <h1 class="titulo-banner-interna">Institucional</h1>
+commom/img/banner-institucional.jpg" alt="banner institucional Tink Roll" title="banner institucional Tink Roll">
+            <h3 class="titulo-banner-interna">Institucional</h3>
         </div>        
         <section class="conteudo">
             <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -47,7 +47,7 @@ unset($_smarty_tpl_vars);
 commom/img/institucional.jpg" alt="institucional" title="institucional">
                 </div>
                 <div class="col-xs-12 col-sm-7 col-md-7">
-                    <h2 class="titulo-interna mg-top-none">Rolamentos e Acessórios Industriais</h2>
+                    <h1 class="titulo-interna mg-top-none">Rolamentos e Acessórios Industriais</h1>
                     <p class="txt-interna">Há mais de 22 anos, a Tink Roll atua no mercado de rolamentos e acessórios industriais.</p>
                     <p class="txt-interna">Visando a solução para a manutenção industrial, a Tink Roll oferece produtos inovadores e de qualidade com preços competitivos de mercado e equipe especializada com vasta experiência.</p>
                     <p class="txt-interna">Com estoque amplo com mais de 10.000 itens e frota própria, garantimos a pontualidade e rapidez na entrega das mercadorias.</p>

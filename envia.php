@@ -32,7 +32,12 @@ if (empty($_POST['nome'])|| empty($_POST['email'])|| empty($_POST['telefone'])||
   $headers 	.= "Reply-To: $email\n";
   $envio 		= mail("tinkroll@tinkroll.com.br", $assunto,$conteudo,$headers);
   
-  echo "<script>location.href ='obrigado-contato'</script>";
+  if ($_POST['pag'] == "fale-conosco") {
+    echo "<script>location.href ='obrigado-contato'</script>";  
+  }else{
+    echo "<script>location.href ='obrigado-orcamento'</script>";  
+  }
+  
 }
 
 ?>
